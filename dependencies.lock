@@ -1,0 +1,20 @@
+dependencies:
+  espressif/w5500:
+    component_hash: e6e47022a1f509d1d1197652a554aea84a8cd4d99161061e187ecf4b78a7f6ca
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=6.0'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.0.1
+  idf:
+    source:
+      type: idf
+    version: 6.1.0
+direct_dependencies:
+- espressif/w5500
+manifest_hash: bc30d59c3fc4e0c509ba8a63cc12e86f59ebe2a73cadcd94a9312eecb6eda348
+target: esp32
+version: 2.0.0

@@ -1,0 +1,632 @@
+Command: /home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python /home/levi/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/levi/CLionProjects/maestro/build/maestro.elf /home/levi/CLionProjects/maestro/build/bootloader/bootloader.elf -m '/home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python' '/home/levi/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+flash read err, 1000
+ets_main.c 371 
+ets Jun  8 2016 00:22:57
+
+rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-1323-gf6aaf22278-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 29 2025 16:42:56[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ac08h (109576) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=0002ac30 vaddr=3ffb0000 size=04354h ( 17236) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=0002ef8c vaddr=40080000 size=0108ch (  4236) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=83720h (538400) map[0m
+[0;32mI (332) esp_image: segment 4: paddr=000b3748 vaddr=4008108c size=1626ch ( 90732) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=000c99bc vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (381) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (381) boot: Disabling RNG early entropy source...[0m
+[0;32mI (392) cpu_start: Multicore app[0m
+[0;32mI (400) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (400) cpu_start: Pro cpu start user code[0m
+[0;32mI (400) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     maestro[0m
+[0;32mI (410) app_init: App version:      f73db5d-dirty[0m
+[0;32mI (414) app_init: Compile time:     Jan  7 2026 09:36:38[0m
+[0;32mI (419) app_init: ELF file SHA256:  6bf8e826f...[0m
+[0;32mI (424) app_init: ESP-IDF:          v6.1-dev-1323-gf6aaf22278-dirty[0m
+[0;32mI (430) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (434) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (438) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (442) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (448) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFB8BF0 len 00027410 (157 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 400972F8 len 00008D08 (35 KiB): IRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (495) main_task: Started on CPU0[0m
+[0;32mI (505) main_task: Calling app_main()[0m
+[0;32mI (505) SPI: Initializing bus SPI2...[0m
+[0;32mI (505) encoders: Initializing Encoders...[0m
+[0;32mI (505) SPI: Adding SPI Device on GPIO5...[0m
+[0;32mI (505) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (515) WIFI: Configuring WiFi...[0m
+[0;32mI (555) wifi:wifi driver task: 3ffc0454, prio:23, stack:6656, core=0[0m
+[0;32mI (565) wifi:wifi firmware version: 02f368a[0m
+[0;32mI (565) wifi:wifi certification version: v7.0[0m
+[0;32mI (565) wifi:config NVS flash: enabled[0m
+[0;32mI (565) wifi:config nano formatting: disabled[0m
+[0;32mI (575) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (585) wifi:Init management short buffer num: 32[0m
+[0;32mI (585) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (585) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (595) wifi:Init static rx buffer num: 10[0m
+[0;32mI (595) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi_init: rx ba win: 6[0m
+[0;32mI (605) wifi_init: accept mbox: 6[0m
+[0;32mI (605) wifi_init: tcpip mbox: 32[0m
+[0;32mI (615) wifi_init: udp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp tx win: 5760[0m
+[0;32mI (615) wifi_init: tcp rx win: 5760[0m
+[0;32mI (625) wifi_init: tcp mss: 1440[0m
+[0;32mI (625) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (625) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (635) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (645) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (725) wifi:mode : sta (7c:9e:bd:49:15:c8)[0m
+[0;32mI (725) wifi:enable tsf[0m
+[1;31mE (725) socket: Creating Socket...[0m
+[0;32mI (735) socket: Socket listening on port 6969[0m
+[0;33mW (735) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (735) WIFI: WiFi not connected[0m
+[0;32mI (735) WIFI: Connecting...[0m
+[0;32mI (755) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (755) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (765) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (775) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (805) wifi:<ba-add>idx:0 (ifx:0, fc:34:97:85:c9:90), tid:5, ssn:0, winSize:64[0m
+[0;32mI (815) wifi:connected with MNDT, aid = 27, channel 8, BW20, bssid = fc:34:97:85:c9:90[0m
+[0;32mI (815) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (815) wifi:pm start, type: 1[0m
+
+[0;32mI (825) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (825) esp_netif_handlers: sta ip: 192.168.88.8, mask: 255.255.255.0, gw: 192.168.88.1[0m
+[0;32mI (885) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2745) WIFI: connected to MNDT[0m
+[0;32mI (2745) socket: Waiting for a new client connection...[0m
+[0;32mI (11845) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:0, winSize:64[0m
+[0;32mI (463345) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (463375) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:39, winSize:64[0m
+[0;32mI (464555) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (464585) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:39, winSize:64[0m
+[0;32mI (465345) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (465355) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:39, winSize:64[0m
+[0;32mI (466415) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (466435) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:39, winSize:64[0m
+[0;32mI (508395) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (508405) socket: Received 10 bytes from client: setfreq 10[0m
+[0;32mI (508405) main: Command: setfreq 10[0m
+[0;32mI (508405) scan: Pulse frequency updated to 10 Hz[0m
+[0;32mI (508915) WIFI: connected to MNDT[0m
+[0;32mI (508915) socket: Waiting for a new client connection...[0m
+[0;32mI (511265) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (511265) socket: Received 4 bytes from client: scan[0m
+[0;32mI (511265) main: Command: scan[0m
+[0;32mI (511265) scan: Running scan[0m
+[0;32mI (521275) scan: Scan finished, 0 frames captured[0m
+[0;32mI (521305) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (521305) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:56, winSize:64[0m
+[0;32mI (521775) WIFI: connected to MNDT[0m
+[0;32mI (521775) socket: Waiting for a new client connection...[0m
+[0;32mI (528575) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (528575) socket: Received 4 bytes from client: scan[0m
+[0;32mI (528575) main: Command: scan[0m
+[0;32mI (528575) scan: Running scan[0m
+[0;32mI (535655) scan: Scan finished, 29 frames captured[0m
+[0;32mI (536165) WIFI: connected to MNDT[0m
+[0;32mI (536165) socket: Waiting for a new client connection...[0m
+[0;32mI (541175) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (541175) socket: Received 4 bytes from client: scan[0m
+[0;32mI (541175) main: Command: scan[0m
+[0;32mI (541175) scan: Running scan[0m
+[0;32mI (542455) scan: Scan finished, 12 frames captured[0m
+[0;32mI (542965) WIFI: connected to MNDT[0m
+[0;32mI (542965) socket: Waiting for a new client connection...[0m
+[0;32mI (546595) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (546595) socket: Received 4 bytes from client: scan[0m
+[0;32mI (546595) main: Command: scan[0m
+[0;32mI (546595) scan: Running scan[0m
+[0;32mI (556595) scan: Scan finished, 0 frames captured[0m
+[0;32mI (557105) WIFI: connected to MNDT[0m
+[0;32mI (557105) socket: Waiting for a new client connection...[0m
+[0;32mI (578325) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (578325) socket: Received 4 bytes from client: scan[0m
+[0;32mI (578325) main: Command: scan[0m
+[0;32mI (578325) scan: Running scan[0m
+[0;32mI (590255) scan: Scan finished, 97 frames captured[0m
+[0;32mI (590775) WIFI: connected to MNDT[0m
+[0;32mI (590775) socket: Waiting for a new client connection...[0m
+[0;32mI (850055) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (850055) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (855025) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:106, winSize:64[0m
+ric
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (495) main_task: Started on CPU0[0m
+[0;32mI (505) main_task: Calling app_main()[0m
+[0;32mI (505) SPI: Initializing bus SPI2...[0m
+[0;32mI (505) encoders: Initializing Encoders...[0m
+[0;32mI (505) SPI: Adding SPI Device on GPIO5...[0m
+[0;32mI (505) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (515) WIFI: Configuring WiFi...[0m
+[0;32mI (555) wifi:wifi driver task: 3ffc0454, prio:23, stack:6656, core=0[0m
+[0;32mI (565) wifi:wifi firmware version: 02f368a[0m
+[0;32mI (565) wifi:wifi certification version: v7.0[0m
+[0;32mI (565) wifi:config NVS flash: enabled[0m
+[0;32mI (565) wifi:config nano formatting: disabled[0m
+[0;32mI (575) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (585) wifi:Init management short buffer num: 32[0m
+[0;32mI (585) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (585) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (595) wifi:Init static rx buffer num: 10[0m
+[0;32mI (595) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi_init: rx ba win: 6[0m
+[0;32mI (605) wifi_init: accept mbox: 6[0m
+[0;32mI (605) wifi_init: tcpip mbox: 32[0m
+[0;32mI (615) wifi_init: udp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp tx win: 5760[0m
+[0;32mI (615) wifi_init: tcp rx win: 5760[0m
+[0;32mI (625) wifi_init: tcp mss: 1440[0m
+[0;32mI (625) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (625) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (635) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (645) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (725) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (745) wifi:mode : sta (7c:9e:bd:49:15:c8)[0m
+[0;32mI (745) wifi:enable tsf[0m
+[1;31mE (745) socket: Creating Socket...[0m
+[0;32mI (745) socket: Socket listening on port 6969[0m
+[0;33mW (755) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (755) WIFI: WiFi not connected[0m
+[0;32mI (755) WIFI: Connecting...[0m
+[0;32mI (805) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (805) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1805) wifi:state: auth -> init (0x200)[0m
+[0;32mI (1815) wifi:new:<8,0>, old:<8,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (2755) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (2755) WIFI: WiFi not connected[0m
+[0;32mI (2755) WIFI: Connecting...[0m
+[0;33mW (4755) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (4755) WIFI: WiFi not connected[0m
+[0;32mI (4755) WIFI: Connecting...[0m
+[1;31mE (4755) wifi:sta is connecting, return error[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3007 (ESP_ERR_WIFI_CONN) at 0x400da987
+file: "./main/wifi_helper.c" line 60
+func: WifiConnect
+expression: wifi_ret
+
+abort() was called at PC 0x4008b397 on core 0
+
+
+Backtrace: 0x4008b43d:0x3ffbad80 0x4008b405:0x3ffbada0 0x4008ae49:0x3ffbadc0 0x4008b397:0x3ffbae30 0x400da987:0x3ffbae60 0x400da5d4:0x3ffbae80 0x400d4fd2:0x3ffbaee0 0x4014f60a:0x3ffbaf10
+
+
+
+
+ELF file SHA256: 6bf8e826f
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-1323-gf6aaf22278-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 29 2025 16:42:56[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1ac08h (109576) map[0m
+[0;32mI (129) esp_image: segment 1: paddr=0002ac30 vaddr=3ffb0000 size=04354h ( 17236) load[0m
+[0;32mI (136) esp_image: segment 2: paddr=0002ef8c vaddr=40080000 size=0108ch (  4236) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=83720h (538400) map[0m
+[0;32mI (332) esp_image: segment 4: paddr=000b3748 vaddr=4008108c size=1626ch ( 90732) load[0m
+[0;32mI (369) esp_image: segment 5: paddr=000c99bc vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (381) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (381) boot: Disabling RNG early entropy source...[0m
+[0;32mI (392) cpu_start: Multicore app[0m
+[0;32mI (400) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (400) cpu_start: Pro cpu start user code[0m
+[0;32mI (400) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (402) app_init: Application information:[0m
+[0;32mI (406) app_init: Project name:     maestro[0m
+[0;32mI (410) app_init: App version:      f73db5d-dirty[0m
+[0;32mI (414) app_init: Compile time:     Jan  7 2026 09:36:38[0m
+[0;32mI (419) app_init: ELF file SHA256:  6bf8e826f...[0m
+[0;32mI (424) app_init: ESP-IDF:          v6.1-dev-1323-gf6aaf22278-dirty[0m
+[0;32mI (430) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (433) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (437) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (442) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (448) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFB8BF0 len 00027410 (157 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (463) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 400972F8 len 00008D08 (35 KiB): IRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (494) main_task: Started on CPU0[0m
+[0;32mI (504) main_task: Calling app_main()[0m
+[0;32mI (504) SPI: Initializing bus SPI2...[0m
+[0;32mI (504) encoders: Initializing Encoders...[0m
+[0;32mI (504) SPI: Adding SPI Device on GPIO5...[0m
+[0;32mI (504) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (514) WIFI: Configuring WiFi...[0m
+[0;32mI (554) wifi:wifi driver task: 3ffc03d0, prio:23, stack:6656, core=0[0m
+[0;32mI (564) wifi:wifi firmware version: 02f368a[0m
+[0;32mI (564) wifi:wifi certification version: v7.0[0m
+[0;32mI (564) wifi:config NVS flash: enabled[0m
+[0;32mI (564) wifi:config nano formatting: disabled[0m
+[0;32mI (574) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (574) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (584) wifi:Init management short buffer num: 32[0m
+[0;32mI (584) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (584) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (594) wifi:Init static rx buffer num: 10[0m
+[0;32mI (594) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (604) wifi_init: rx ba win: 6[0m
+[0;32mI (604) wifi_init: accept mbox: 6[0m
+[0;32mI (604) wifi_init: tcpip mbox: 32[0m
+[0;32mI (614) wifi_init: udp mbox: 6[0m
+[0;32mI (614) wifi_init: tcp mbox: 6[0m
+[0;32mI (614) wifi_init: tcp tx win: 5760[0m
+[0;32mI (614) wifi_init: tcp rx win: 5760[0m
+[0;32mI (624) wifi_init: tcp mss: 1440[0m
+[0;32mI (624) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (624) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (634) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (644) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (734) wifi:mode : sta (7c:9e:bd:49:15:c8)[0m
+[0;32mI (734) wifi:enable tsf[0m
+[1;31mE (734) socket: Creating Socket...[0m
+[0;32mI (734) socket: Socket listening on port 6969[0m
+[0;33mW (734) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (734) WIFI: WiFi not connected[0m
+[0;32mI (744) WIFI: Connecting...[0m
+[0;32mI (804) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (804) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (854) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (934) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (974) wifi:<ba-add>idx:0 (ifx:0, fc:34:97:85:c9:90), tid:5, ssn:0, winSize:64[0m
+[0;32mI (2744) WIFI: connected to [0m
+[0;32mI (2744) socket: Waiting for a new client connection...[0m
+[0;32mI (5044) wifi:state: run -> init (0x2c0)[0m
+[0;32mI (5054) wifi:<ba-del>idx:0, tid:5[0m
+[0;32mI (5054) wifi:new:<8,0>, old:<8,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+	�: DRAM
+[0;32mI (453) heap_init: At 3FFB8BF0 len 00027410 (157 KiB): DRAM[0m
+[0;32mI (458) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (469) heap_init: At 400972F8 len 00008D08 (35 KiB): IRAM[0m
+[0;32mI (476) spi_flash: detected chip: generic[0m
+[0;32mI (478) spi_flash: flash io: dio[0m
+[0;33mW (481) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (495) main_task: Started on CPU0[0m
+[0;32mI (505) main_task: Calling app_main()[0m
+[0;32mI (505) SPI: Initializing bus SPI2...[0m
+[0;32mI (505) encoders: Initializing Encoders...[0m
+[0;32mI (505) SPI: Adding SPI Device on GPIO5...[0m
+[0;32mI (505) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (515) WIFI: Configuring WiFi...[0m
+[0;32mI (555) wifi:wifi driver task: 3ffc03d0, prio:23, stack:6656, core=0[0m
+[0;32mI (565) wifi:wifi firmware version: 02f368a[0m
+[0;32mI (565) wifi:wifi certification version: v7.0[0m
+[0;32mI (565) wifi:config NVS flash: enabled[0m
+[0;32mI (565) wifi:config nano formatting: disabled[0m
+[0;32mI (575) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (575) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (585) wifi:Init management short buffer num: 32[0m
+[0;32mI (585) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (585) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (595) wifi:Init static rx buffer num: 10[0m
+[0;32mI (595) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (605) wifi_init: rx ba win: 6[0m
+[0;32mI (605) wifi_init: accept mbox: 6[0m
+[0;32mI (605) wifi_init: tcpip mbox: 32[0m
+[0;32mI (615) wifi_init: udp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp mbox: 6[0m
+[0;32mI (615) wifi_init: tcp tx win: 5760[0m
+[0;32mI (615) wifi_init: tcp rx win: 5760[0m
+[0;32mI (625) wifi_init: tcp mss: 1440[0m
+[0;32mI (625) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (625) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (635) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (645) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (725) wifi:mode : sta (7c:9e:bd:49:15:c8)[0m
+[0;32mI (725) wifi:enable tsf[0m
+[1;31mE (725) socket: Creating Socket...[0m
+[0;32mI (735) socket: Socket listening on port 6969[0m
+[0;33mW (735) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (735) WIFI: WiFi not connected[0m
+[0;32mI (735) WIFI: Connecting...[0m
+[0;32mI (765) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (765) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (785) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (795) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (815) wifi:<ba-add>idx:0 (ifx:0, fc:34:97:85:c9:90), tid:5, ssn:0, winSize:64[0m
+[0;32mI (825) wifi:connected with MNDT, aid = 27, channel 8, BW20, bssid = fc:34:97:85:c9:90[0m
+[0;32mI (825) wifi:security: WPA2-PSK, phy: bgn, rssi: -51[0m
+[0;32mI (835) wifi:pm start, type: 1[0m
+
+[0;32mI (835) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (835) esp_netif_handlers: sta ip: 192.168.88.8, mask: 255.255.255.0, gw: 192.168.88.1[0m
+[0;32mI (865) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2745) WIFI: connected to MNDT[0m
+[0;32mI (2745) socket: Waiting for a new client connection...[0m
+[0;32mI (33545) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:0, winSize:64[0m
+[0;32mI (33565) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (33565) socket: Received 10 bytes from client: setfreq 10[0m
+[0;32mI (33565) main: Command: setfreq 10[0m
+[0;32mI (33565) scan: Pulse frequency updated to 10 Hz[0m
+[0;32mI (34075) WIFI: connected to MNDT[0m
+[0;32mI (34075) socket: Waiting for a new client connection...[0m
+[0;32mI (94765) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (94765) socket: Received 4 bytes from client: scan[0m
+[0;32mI (94765) main: Command: scan[0m
+[0;32mI (94765) scan: Running scan[0m
+[0;32mI (101265) scan: Scan finished, 38 frames captured[0m
+[0;32mI (101775) WIFI: connected to MNDT[0m
+[0;32mI (101775) socket: Waiting for a new client connection...[0m
+[0;32mI (123145) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (123145) socket: Received 4 bytes from client: scan[0m
+[0;32mI (123145) main: Command: scan[0m
+[0;32mI (123145) scan: Running scan[0m
+[0;32mI (133155) scan: Scan finished, 0 frames captured[0m
+[0;32mI (133655) WIFI: connected to MNDT[0m
+[0;32mI (133655) socket: Waiting for a new client connection...[0m
+[0;32mI (152635) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (152635) socket: Received 11 bytes from client: setfreq 400[0m
+[0;32mI (152635) main: Command: setfreq 400[0m
+[0;32mI (152635) scan: Pulse frequency updated to 400 Hz[0m
+[0;32mI (153145) WIFI: connected to MNDT[0m
+[0;32mI (153145) socket: Waiting for a new client connection...[0m
+[0;32mI (159695) socket: Accepted connection from IP 192.168.88.169[0m
+[0;32mI (159705) socket: Received 4 bytes from client: scan[0m
+[0;32mI (159705) main: Command: scan[0m
+[0;32mI (159705) scan: Running scan[0m
+[0;32mI (162945) scan: Scan finished, 256 frames captured[0m
+[0;32mI (163495) WIFI: connected to MNDT[0m
+[0;32mI (163495) socket: Waiting for a new client connection...[0m
+���1, snd_ch_cfg:0x0
+[0;32mI (755) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (765) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (775) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (785) wifi:<ba-add>idx:0 (ifx:0, fc:34:97:85:c9:90), tid:5, ssn:0, winSize:64[0m
+[0;32mI (795) wifi:connected with MNDT, aid = 24, channel 8, BW20, bssid = fc:34:97:85:c9:90[0m
+[0;32mI (795) wifi:security: WPA2-PSK, phy: bgn, rssi: -53[0m
+[0;32mI (795) wifi:pm start, type: 1[0m
+
+[0;32mI (795) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (805) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (815) esp_netif_handlers: sta ip: 192.168.88.8, mask: 255.255.255.0, gw: 192.168.88.1[0m
+[0;32mI (2735) WIFI: connected to MNDT[0m
+[0;32mI (2735) socket: Waiting for a new client connection...[0m
+[0;32mI (61335) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:0, winSize:64[0m
+[0;32mI (15465995) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (15465995) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15465995) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1321, winSize:64[0m
+[0;32mI (15582895) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (15582895) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15583815) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1331, winSize:64[0m
+[0;32mI (15584675) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15584675) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1332, winSize:64[0m
+[0;32mI (15585855) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15585855) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1332, winSize:64[0m
+[0;32mI (15586895) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15586895) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1332, winSize:64[0m
+[0;32mI (15587065) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15587065) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1332, winSize:64[0m
+[0;32mI (15643175) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (15643185) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1337, winSize:64[0m
+[0;32mI (16319455) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (16319455) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16319565) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1393, winSize:64[0m
+[0;32mI (16320565) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16320595) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1394, winSize:64[0m
+[0;32mI (16321585) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16321615) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1394, winSize:64[0m
+[0;32mI (16321925) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16321935) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1394, winSize:64[0m
+[0;32mI (16322235) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16322245) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1394, winSize:64[0m
+[0;32mI (16379135) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16379145) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1399, winSize:64[0m
+[0;32mI (16567125) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (16567125) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16572375) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1414, winSize:64[0m
+[0;32mI (16936415) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (16936415) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1445, winSize:64[0m
+[0;32mI (17663415) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (17663415) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (17665925) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1507, winSize:64[0m
+[0;32mI (17900955) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (17900955) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (17910055) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1526, winSize:64[0m
+[0;32mI (17910405) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (17910415) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1528, winSize:64[0m
+[0;32mI (17910615) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (17910625) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1528, winSize:64[0m
+[0;32mI (17910885) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (17910895) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1528, winSize:64[0m
+[0;32mI (18031285) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (18031285) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18032315) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1538, winSize:64[0m
+[0;32mI (18762635) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (18762635) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18763855) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1598, winSize:64[0m
+[0;32mI (18764445) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18764545) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1599, winSize:64[0m
+[0;32mI (18765005) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18765045) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1599, winSize:64[0m
+[0;32mI (18765865) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18765865) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1599, winSize:64[0m
+[0;32mI (18766185) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18766185) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1599, winSize:64[0m
+[0;32mI (18822455) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18822465) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1604, winSize:64[0m
+[0;32mI (18882525) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (18882525) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18882905) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1608, winSize:64[0m
+[0;32mI (18884495) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18884525) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1609, winSize:64[0m
+[0;32mI (18885395) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18885395) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1609, winSize:64[0m
+[0;32mI (18885985) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18885985) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1609, winSize:64[0m
+[0;32mI (18941545) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (18941555) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1613, winSize:64[0m
+[0;32mI (19378505) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (19378505) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (19384855) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1650, winSize:64[0m
+[0;32mI (19885135) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (19885135) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (19891845) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1693, winSize:64[0m
+[0;32mI (20263305) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (20263305) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (20265275) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1725, winSize:64[0m
+[0;32mI (20265995) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (20266055) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1725, winSize:64[0m
+[0;32mI (20268085) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (20268135) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1725, winSize:64[0m
+[0;32mI (20323075) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (20323075) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1730, winSize:64[0m
+[0;32mI (20663635) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (20663635) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (20665095) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1759, winSize:64[0m
+[0;32mI (24323955) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (24323955) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (24324745) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2066, winSize:64[0m
+[0;32mI (24691745) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (24691745) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2097, winSize:64[0m
+[0;32mI (70774145) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (70774145) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (70782115) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1863, winSize:64[0m
+[0;32mI (71182135) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (71182135) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71183605) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1897, winSize:64[0m
+[0;32mI (71297505) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (71297505) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71299165) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1906, winSize:64[0m
+[0;32mI (71299575) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71299585) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1907, winSize:64[0m
+[0;32mI (71300625) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71300655) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1907, winSize:64[0m
+[0;32mI (71302645) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71302655) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1907, winSize:64[0m
+[0;32mI (71357585) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71357585) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1911, winSize:64[0m
+[0;32mI (71439555) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (71439555) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71440125) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1918, winSize:64[0m
+[0;32mI (71440475) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71440485) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1919, winSize:64[0m
+[0;32mI (71441525) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71441565) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1919, winSize:64[0m
+[0;32mI (71442655) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71442675) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1919, winSize:64[0m
+[0;32mI (71443605) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71443615) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1919, winSize:64[0m
+[0;32mI (71498695) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71498695) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1923, winSize:64[0m
+[0;32mI (71724825) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (71724825) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (71733305) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1943, winSize:64[0m
+[0;32mI (72266345) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (72266345) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72272545) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:1988, winSize:64[0m
+[0;32mI (72676145) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (72676145) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72676265) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2022, winSize:64[0m
+[0;32mI (72676295) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72676295) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2023, winSize:64[0m
+[0;32mI (72676515) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72676525) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2023, winSize:64[0m
+[0;32mI (72676655) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72676655) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2023, winSize:64[0m
+[0;32mI (72676845) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (72676855) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2023, winSize:64[0m
+[0;32mI (73087965) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (73087965) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73096065) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2058, winSize:64[0m
+[0;32mI (73225935) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (73225935) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73235865) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2068, winSize:64[0m
+[0;32mI (73236075) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73236085) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2070, winSize:64[0m
+[0;32mI (73236295) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73236295) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2070, winSize:64[0m
+[0;32mI (73236595) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73236605) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2070, winSize:64[0m
+[0;32mI (73357405) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (73357405) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73369515) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2079, winSize:64[0m
+[0;32mI (73370025) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73370045) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2080, winSize:64[0m
+[0;32mI (73370715) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73370765) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2080, winSize:64[0m
+[0;32mI (73371755) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73371785) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2080, winSize:64[0m
+[0;32mI (73372435) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73372455) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2080, winSize:64[0m
+[0;32mI (73428365) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (73428365) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2085, winSize:64[0m
+[0;32mI (75152325) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0;32mI (75152325) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75153665) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2231, winSize:64[0m
+[0;32mI (75153895) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75154045) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2232, winSize:64[0m
+[0;32mI (75154835) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75154885) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2232, winSize:64[0m
+[0;32mI (75155555) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75155605) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2232, winSize:64[0m
+[0;32mI (75156055) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75156055) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2232, winSize:64[0m
+[0;32mI (75212315) wifi:<ba-del>idx:1, tid:0[0m
+[0;32mI (75212325) wifi:<ba-add>idx:1 (ifx:0, fc:34:97:85:c9:90), tid:0, ssn:2236, winSize:64[0m
+[0;32mI (75286355) wifi:[ADDBA]RX DELBA, reason:39, delete tid:0, initiator:1(originator)[0m
+[0

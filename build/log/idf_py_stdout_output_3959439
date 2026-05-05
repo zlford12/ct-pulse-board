@@ -1,0 +1,1858 @@
+Command: /home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python /home/levi/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/levi/CLionProjects/maestro/build/maestro.elf /home/levi/CLionProjects/maestro/build/bootloader/bootloader.elf -m '/home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python' '/home/levi/esp-idf/tools/idf.py'
+�rev:         v1.0ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-1323-gf6aaf22278-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 29 2025 16:42:56[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a4d4h ( 42196) map[0m
+[0;32mI (105) esp_image: segment 1: paddr=0001a4fc vaddr=3ffb0000 size=02790h ( 10128) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=0001cc94 vaddr=40080000 size=03384h ( 13188) load[0m
+[0;32mI (115) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=0e6ach ( 59052) map[0m
+[0;32mI (137) esp_image: segment 4: paddr=0002e6d4 vaddr=40083384 size=098f4h ( 39156) load[0m
+[0;32mI (154) esp_image: segment 5: paddr=00037fd0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (160) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (160) boot: Disabling RNG early entropy source...[0m
+[0;32mI (172) cpu_start: Multicore app[0m
+[0;32mI (180) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (180) cpu_start: Pro cpu start user code[0m
+[0;32mI (180) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (182) app_init: Application information:[0m
+[0;32mI (186) app_init: Project name:     maestro[0m
+[0;32mI (190) app_init: App version:      bbb86fa-dirty[0m
+[0;32mI (194) app_init: Compile time:     Dec 30 2025 17:37:43[0m
+[0;32mI (199) app_init: ELF file SHA256:  7a7f081a7...[0m
+[0;32mI (203) app_init: ESP-IDF:          v6.1-dev-1323-gf6aaf22278-dirty[0m
+[0;32mI (209) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (213) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (217) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (221) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (227) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (232) heap_init: At 3FFB30B8 len 0002CF48 (179 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (243) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008CC78 len 00013388 (76 KiB): IRAM[0m
+[0;32mI (255) spi_flash: detected chip: generic[0m
+[0;32mI (258) spi_flash: flash io: dio[0m
+[0;33mW (260) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (274) main_task: Started on CPU0[0m
+[0;32mI (284) main_task: Calling app_main()[0m
+[0;32mI (284) SPI: Initializing bus SPI2...[0m
+[0;32mI (284) SPI: Adding SPI Device on GPIO4...[0m
+[0;32mI (284) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (284) SPI: Transaction Size: 16 bits[0m
+[0;32mI (294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (294) main: Temperature: 2048[0m
+[0;32mI (294) main: [0m
+[0;32mI (794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (794) main: Temperature: 2041[0m
+[0;32mI (794) main: [0m
+[0;32mI (1294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (1294) main: Temperature: 2042[0m
+[0;32mI (1294) main: [0m
+[0;32mI (1794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (1794) main: Temperature: 2042[0m
+[0;32mI (1794) main: [0m
+[0;32mI (2294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (2294) main: Temperature: 2042[0m
+[0;32mI (2294) main: [0m
+[0;32mI (2794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (2794) main: Temperature: 2042[0m
+[0;32mI (2794) main: [0m
+[0;32mI (3294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (3294) main: Temperature: 2042[0m
+[0;32mI (3294) main: [0m
+[0;32mI (3794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (3794) main: Temperature: 2043[0m
+[0;32mI (3794) main: [0m
+[0;32mI (4294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (4294) main: Temperature: 2042[0m
+[0;32mI (4294) main: [0m
+[0;32mI (4794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (4794) main: Temperature: 2042[0m
+[0;32mI (4794) main: [0m
+[0;32mI (5294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (5294) main: Temperature: 2043[0m
+[0;32mI (5294) main: [0m
+[0;32mI (5794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (5794) main: Temperature: 2043[0m
+[0;32mI (5794) main: [0m
+[0;32mI (6294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (6294) main: Temperature: 2043[0m
+[0;32mI (6294) main: [0m
+[0;32mI (6794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (6794) main: Temperature: 2043[0m
+[0;32mI (6794) main: [0m
+[0;32mI (7294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (7294) main: Temperature: 2043[0m
+[0;32mI (7294) main: [0m
+[0;32mI (7794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (7794) main: Temperature: 2043[0m
+[0;32mI (7794) main: [0m
+[0;32mI (8294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (8294) main: Temperature: 2040[0m
+[0;32mI (8294) main: [0m
+[0;32mI (8794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (8794) main: Temperature: 2035[0m
+[0;32mI (8794) main: [0m
+[0;32mI (9294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (9294) main: Temperature: 2033[0m
+[0;32mI (9294) main: [0m
+[0;32mI (9794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (9794) main: Temperature: 2033[0m
+[0;32mI (9794) main: [0m
+[0;32mI (10294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (10294) main: Temperature: 2035[0m
+[0;32mI (10294) main: [0m
+[0;32mI (10794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (10794) main: Temperature: 2037[0m
+[0;32mI (10794) main: [0m
+[0;32mI (11294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (11294) main: Temperature: 2038[0m
+[0;32mI (11294) main: [0m
+[0;32mI (11794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (11794) main: Temperature: 2039[0m
+[0;32mI (11794) main: [0m
+[0;32mI (12294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (12294) main: Temperature: 2039[0m
+[0;32mI (12294) main: [0m
+[0;32mI (12794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (12794) main: Temperature: 2040[0m
+[0;32mI (12794) main: [0m
+[0;32mI (13294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (13294) main: Temperature: 2040[0m
+[0;32mI (13294) main: [0m
+[0;32mI (13794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (13794) main: Temperature: 2040[0m
+[0;32mI (13794) main: [0m
+[0;32mI (14294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (14294) main: Temperature: 2040[0m
+[0;32mI (14294) main: [0m
+[0;32mI (14794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (14794) main: Temperature: 2040[0m
+[0;32mI (14794) main: [0m
+[0;32mI (15294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (15294) main: Temperature: 2040[0m
+[0;32mI (15294) main: [0m
+[0;32mI (15794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (15794) main: Temperature: 2041[0m
+[0;32mI (15794) main: [0m
+[0;32mI (16294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (16294) main: Temperature: 2041[0m
+[0;32mI (16294) main: [0m
+[0;32mI (16794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (16794) main: Temperature: 2041[0m
+[0;32mI (16794) main: [0m
+[0;32mI (17294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (17294) main: Temperature: 2041[0m
+[0;32mI (17294) main: [0m
+[0;32mI (17794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (17794) main: Temperature: 2040[0m
+[0;32mI (17794) main: [0m
+[0;32mI (18294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (18294) main: Temperature: 2041[0m
+[0;32mI (18294) main: [0m
+[0;32mI (18794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (18794) main: Temperature: 2041[0m
+[0;32mI (18794) main: [0m
+[0;32mI (19294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (19294) main: Temperature: 2041[0m
+[0;32mI (19294) main: [0m
+[0;32mI (19794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (19794) main: Temperature: 2041[0m
+[0;32mI (19794) main: [0m
+[0;32mI (20294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (20294) main: Temperature: 2041[0m
+[0;32mI (20294) main: [0m
+[0;32mI (20794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (20794) main: Temperature: 2041[0m
+[0;32mI (20794) main: [0m
+[0;32mI (21294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (21294) main: Temperature: 2041[0m
+[0;32mI (21294) main: [0m
+[0;32mI (21794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (21794) main: Temperature: 2041[0m
+[0;32mI (21794) main: [0m
+[0;32mI (22294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (22294) main: Temperature: 2042[0m
+[0;32mI (22294) main: [0m
+[0;32mI (22794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (22794) main: Temperature: 2042[0m
+[0;32mI (22794) main: [0m
+[0;32mI (23294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (23294) main: Temperature: 2041[0m
+[0;32mI (23294) main: [0m
+[0;32mI (23794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (23794) main: Temperature: 2042[0m
+[0;32mI (23794) main: [0m
+[0;32mI (24294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (24294) main: Temperature: 2042[0m
+[0;32mI (24294) main: [0m
+[0;32mI (24794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (24794) main: Temperature: 2042[0m
+[0;32mI (24794) main: [0m
+[0;32mI (25294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (25294) main: Temperature: 2042[0m
+[0;32mI (25294) main: [0m
+[0;32mI (25794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (25794) main: Temperature: 2042[0m
+[0;32mI (25794) main: [0m
+[0;32mI (26294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (26294) main: Temperature: 2042[0m
+[0;32mI (26294) main: [0m
+[0;32mI (26794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (26794) main: Temperature: 2042[0m
+[0;32mI (26794) main: [0m
+[0;32mI (27294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (27294) main: Temperature: 2042[0m
+[0;32mI (27294) main: [0m
+[0;32mI (27794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (27794) main: Temperature: 2042[0m
+[0;32mI (27794) main: [0m
+[0;32mI (28294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (28294) main: Temperature: 2042[0m
+[0;32mI (28294) main: [0m
+[0;32mI (28794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (28794) main: Temperature: 2042[0m
+[0;32mI (28794) main: [0m
+[0;32mI (29294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (29294) main: Temperature: 2042[0m
+[0;32mI (29294) main: [0m
+[0;32mI (29794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (29794) main: Temperature: 2042[0m
+[0;32mI (29794) main: [0m
+[0;32mI (30294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (30294) main: Temperature: 2042[0m
+[0;32mI (30294) main: [0m
+[0;32mI (30794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (30794) main: Temperature: 2042[0m
+[0;32mI (30794) main: [0m
+[0;32mI (31294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (31294) main: Temperature: 2042[0m
+[0;32mI (31294) main: [0m
+[0;32mI (31794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (31794) main: Temperature: 2042[0m
+[0;32mI (31794) main: [0m
+[0;32mI (32294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (32294) main: Temperature: 2042[0m
+[0;32mI (32294) main: [0m
+[0;32mI (32794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (32794) main: Temperature: 2042[0m
+[0;32mI (32794) main: [0m
+[0;32mI (33294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (33294) main: Temperature: 2042[0m
+[0;32mI (33294) main: [0m
+[0;32mI (33794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (33794) main: Temperature: 2042[0m
+[0;32mI (33794) main: [0m
+[0;32mI (34294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (34294) main: Temperature: 2042[0m
+[0;32mI (34294) main: [0m
+[0;32mI (34794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (34794) main: Temperature: 2042[0m
+[0;32mI (34794) main: [0m
+[0;32mI (35294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (35294) main: Temperature: 2042[0m
+[0;32mI (35294) main: [0m
+[0;32mI (35794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (35794) main: Temperature: 2042[0m
+[0;32mI (35794) main: [0m
+[0;32mI (36294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (36294) main: Temperature: 2042[0m
+[0;32mI (36294) main: [0m
+[0;32mI (36794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (36794) main: Temperature: 2042[0m
+[0;32mI (36794) main: [0m
+[0;32mI (37294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (37294) main: Temperature: 2042[0m
+[0;32mI (37294) main: [0m
+[0;32mI (37794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (37794) main: Temperature: 2042[0m
+[0;32mI (37794) main: [0m
+[0;32mI (38294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (38294) main: Temperature: 2042[0m
+[0;32mI (38294) main: [0m
+[0;32mI (38794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (38794) main: Temperature: 2042[0m
+[0;32mI (38794) main: [0m
+[0;32mI (39294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (39294) main: Temperature: 2042[0m
+[0;32mI (39294) main: [0m
+[0;32mI (39794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (39794) main: Temperature: 2042[0m
+[0;32mI (39794) main: [0m
+[0;32mI (40294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (40294) main: Temperature: 2042[0m
+[0;32mI (40294) main: [0m
+[0;32mI (40794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (40794) main: Temperature: 2042[0m
+[0;32mI (40794) main: [0m
+[0;32mI (41294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (41294) main: Temperature: 2042[0m
+[0;32mI (41294) main: [0m
+[0;32mI (41794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (41794) main: Temperature: 2043[0m
+[0;32mI (41794) main: [0m
+[0;32mI (42294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (42294) main: Temperature: 2042[0m
+[0;32mI (42294) main: [0m
+[0;32mI (42794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (42794) main: Temperature: 2042[0m
+[0;32mI (42794) main: [0m
+[0;32mI (43294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (43294) main: Temperature: 2042[0m
+[0;32mI (43294) main: [0m
+[0;32mI (43794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (43794) main: Temperature: 2043[0m
+[0;32mI (43794) main: [0m
+[0;32mI (44294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (44294) main: Temperature: 2042[0m
+[0;32mI (44294) main: [0m
+[0;32mI (44794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (44794) main: Temperature: 2042[0m
+[0;32mI (44794) main: [0m
+[0;32mI (45294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (45294) main: Temperature: 2042[0m
+[0;32mI (45294) main: [0m
+[0;32mI (45794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (45794) main: Temperature: 2042[0m
+[0;32mI (45794) main: [0m
+[0;32mI (46294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (46294) main: Temperature: 2042[0m
+[0;32mI (46294) main: [0m
+[0;32mI (46794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (46794) main: Temperature: 2042[0m
+[0;32mI (46794) main: [0m
+[0;32mI (47294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (47294) main: Temperature: 2043[0m
+[0;32mI (47294) main: [0m
+[0;32mI (47794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (47794) main: Temperature: 2042[0m
+[0;32mI (47794) main: [0m
+[0;32mI (48294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (48294) main: Temperature: 2043[0m
+[0;32mI (48294) main: [0m
+[0;32mI (48794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (48794) main: Temperature: 2043[0m
+[0;32mI (48794) main: [0m
+[0;32mI (49294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (49294) main: Temperature: 2042[0m
+[0;32mI (49294) main: [0m
+[0;32mI (49794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (49794) main: Temperature: 2042[0m
+[0;32mI (49794) main: [0m
+[0;32mI (50294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (50294) main: Temperature: 2043[0m
+[0;32mI (50294) main: [0m
+[0;32mI (50794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (50794) main: Temperature: 2043[0m
+[0;32mI (50794) main: [0m
+[0;32mI (51294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (51294) main: Temperature: 2043[0m
+[0;32mI (51294) main: [0m
+[0;32mI (51794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (51794) main: Temperature: 2043[0m
+[0;32mI (51794) main: [0m
+[0;32mI (52294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (52294) main: Temperature: 2043[0m
+[0;32mI (52294) main: [0m
+[0;32mI (52794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (52794) main: Temperature: 2043[0m
+[0;32mI (52794) main: [0m
+[0;32mI (53294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (53294) main: Temperature: 2042[0m
+[0;32mI (53294) main: [0m
+[0;32mI (53794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (53794) main: Temperature: 2043[0m
+[0;32mI (53794) main: [0m
+[0;32mI (54294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (54294) main: Temperature: 2042[0m
+[0;32mI (54294) main: [0m
+[0;32mI (54794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (54794) main: Temperature: 2042[0m
+[0;32mI (54794) main: [0m
+[0;32mI (55294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (55294) main: Temperature: 2042[0m
+[0;32mI (55294) main: [0m
+[0;32mI (55794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (55794) main: Temperature: 2043[0m
+[0;32mI (55794) main: [0m
+[0;32mI (56294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (56294) main: Temperature: 2043[0m
+[0;32mI (56294) main: [0m
+[0;32mI (56794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (56794) main: Temperature: 2043[0m
+[0;32mI (56794) main: [0m
+[0;32mI (57294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (57294) main: Temperature: 2043[0m
+[0;32mI (57294) main: [0m
+[0;32mI (57794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (57794) main: Temperature: 2043[0m
+[0;32mI (57794) main: [0m
+[0;32mI (58294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (58294) main: Temperature: 2043[0m
+[0;32mI (58294) main: [0m
+[0;32mI (58794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (58794) main: Temperature: 2043[0m
+[0;32mI (58794) main: [0m
+[0;32mI (59294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (59294) main: Temperature: 2043[0m
+[0;32mI (59294) main: [0m
+[0;32mI (59794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (59794) main: Temperature: 2043[0m
+[0;32mI (59794) main: [0m
+[0;32mI (60294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (60294) main: Temperature: 2043[0m
+[0;32mI (60294) main: [0m
+[0;32mI (60794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (60794) main: Temperature: 2043[0m
+[0;32mI (60794) main: [0m
+[0;32mI (61294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (61294) main: Temperature: 2043[0m
+[0;32mI (61294) main: [0m
+[0;32mI (61794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (61794) main: Temperature: 2043[0m
+[0;32mI (61794) main: [0m
+[0;32mI (62294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (62294) main: Temperature: 2043[0m
+[0;32mI (62294) main: [0m
+[0;32mI (62794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (62794) main: Temperature: 2043[0m
+[0;32mI (62794) main: [0m
+[0;32mI (63294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (63294) main: Temperature: 2043[0m
+[0;32mI (63294) main: [0m
+[0;32mI (63794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (63794) main: Temperature: 2043[0m
+[0;32mI (63794) main: [0m
+[0;32mI (64294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (64294) main: Temperature: 2043[0m
+[0;32mI (64294) main: [0m
+[0;32mI (64794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (64794) main: Temperature: 2043[0m
+[0;32mI (64794) main: [0m
+[0;32mI (65294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (65294) main: Temperature: 2043[0m
+[0;32mI (65294) main: [0m
+[0;32mI (65794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (65794) main: Temperature: 2043[0m
+[0;32mI (65794) main: [0m
+[0;32mI (66294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (66294) main: Temperature: 2043[0m
+[0;32mI (66294) main: [0m
+[0;32mI (66794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (66794) main: Temperature: 2043[0m
+[0;32mI (66794) main: [0m
+[0;32mI (67294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (67294) main: Temperature: 2043[0m
+[0;32mI (67294) main: [0m
+[0;32mI (67794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (67794) main: Temperature: 2043[0m
+[0;32mI (67794) main: [0m
+[0;32mI (68294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (68294) main: Temperature: 2043[0m
+[0;32mI (68294) main: [0m
+[0;32mI (68794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (68794) main: Temperature: 2043[0m
+[0;32mI (68794) main: [0m
+[0;32mI (69294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (69294) main: Temperature: 2043[0m
+[0;32mI (69294) main: [0m
+[0;32mI (69794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (69794) main: Temperature: 2043[0m
+[0;32mI (69794) main: [0m
+[0;32mI (70294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (70294) main: Temperature: 2043[0m
+[0;32mI (70294) main: [0m
+[0;32mI (70794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (70794) main: Temperature: 2043[0m
+[0;32mI (70794) main: [0m
+[0;32mI (71294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (71294) main: Temperature: 2043[0m
+[0;32mI (71294) main: [0m
+[0;32mI (71794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (71794) main: Temperature: 2043[0m
+[0;32mI (71794) main: [0m
+[0;32mI (72294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (72294) main: Temperature: 2043[0m
+[0;32mI (72294) main: [0m
+[0;32mI (72794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (72794) main: Temperature: 2043[0m
+[0;32mI (72794) main: [0m
+[0;32mI (73294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (73294) main: Temperature: 2043[0m
+[0;32mI (73294) main: [0m
+[0;32mI (73794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (73794) main: Temperature: 2043[0m
+[0;32mI (73794) main: [0m
+[0;32mI (74294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (74294) main: Temperature: 2043[0m
+[0;32mI (74294) main: [0m
+[0;32mI (74794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (74794) main: Temperature: 2043[0m
+[0;32mI (74794) main: [0m
+[0;32mI (75294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (75294) main: Temperature: 2043[0m
+[0;32mI (75294) main: [0m
+[0;32mI (75794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (75794) main: Temperature: 2043[0m
+[0;32mI (75794) main: [0m
+[0;32mI (76294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (76294) main: Temperature: 2043[0m
+[0;32mI (76294) main: [0m
+[0;32mI (76794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (76794) main: Temperature: 2043[0m
+[0;32mI (76794) main: [0m
+[0;32mI (77294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (77294) main: Temperature: 2043[0m
+[0;32mI (77294) main: [0m
+[0;32mI (77794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (77794) main: Temperature: 2043[0m
+[0;32mI (77794) main: [0m
+[0;32mI (78294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (78294) main: Temperature: 2043[0m
+[0;32mI (78294) main: [0m
+[0;32mI (78794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (78794) main: Temperature: 2043[0m
+[0;32mI (78794) main: [0m
+[0;32mI (79294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (79294) main: Temperature: 2043[0m
+[0;32mI (79294) main: [0m
+[0;32mI (79794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (79794) main: Temperature: 2043[0m
+[0;32mI (79794) main: [0m
+[0;32mI (80294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (80294) main: Temperature: 2043[0m
+[0;32mI (80294) main: [0m
+[0;32mI (80794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (80794) main: Temperature: 2043[0m
+[0;32mI (80794) main: [0m
+[0;32mI (81294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (81294) main: Temperature: 2043[0m
+[0;32mI (81294) main: [0m
+[0;32mI (81794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (81794) main: Temperature: 2043[0m
+[0;32mI (81794) main: [0m
+[0;32mI (82294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (82294) main: Temperature: 2043[0m
+[0;32mI (82294) main: [0m
+[0;32mI (82794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (82794) main: Temperature: 2043[0m
+[0;32mI (82794) main: [0m
+[0;32mI (83294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (83294) main: Temperature: 2043[0m
+[0;32mI (83294) main: [0m
+[0;32mI (83794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (83794) main: Temperature: 2043[0m
+[0;32mI (83794) main: [0m
+[0;32mI (84294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (84294) main: Temperature: 2043[0m
+[0;32mI (84294) main: [0m
+[0;32mI (84794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (84794) main: Temperature: 2043[0m
+[0;32mI (84794) main: [0m
+[0;32mI (85294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (85294) main: Temperature: 2043[0m
+[0;32mI (85294) main: [0m
+[0;32mI (85794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (85794) main: Temperature: 2043[0m
+[0;32mI (85794) main: [0m
+[0;32mI (86294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (86294) main: Temperature: 2043[0m
+[0;32mI (86294) main: [0m
+[0;32mI (86794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (86794) main: Temperature: 2043[0m
+[0;32mI (86794) main: [0m
+[0;32mI (87294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (87294) main: Temperature: 2043[0m
+[0;32mI (87294) main: [0m
+[0;32mI (87794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (87794) main: Temperature: 2043[0m
+[0;32mI (87794) main: [0m
+[0;32mI (88294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (88294) main: Temperature: 2043[0m
+[0;32mI (88294) main: [0m
+[0;32mI (88794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (88794) main: Temperature: 2043[0m
+[0;32mI (88794) main: [0m
+[0;32mI (89294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (89294) main: Temperature: 2043[0m
+[0;32mI (89294) main: [0m
+[0;32mI (89794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (89794) main: Temperature: 2043[0m
+[0;32mI (89794) main: [0m
+[0;32mI (90294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (90294) main: Temperature: 2043[0m
+[0;32mI (90294) main: [0m
+[0;32mI (90794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (90794) main: Temperature: 2043[0m
+[0;32mI (90794) main: [0m
+[0;32mI (91294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (91294) main: Temperature: 2043[0m
+[0;32mI (91294) main: [0m
+[0;32mI (91794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (91794) main: Temperature: 2043[0m
+[0;32mI (91794) main: [0m
+[0;32mI (92294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (92294) main: Temperature: 2043[0m
+[0;32mI (92294) main: [0m
+[0;32mI (92794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (92794) main: Temperature: 2043[0m
+[0;32mI (92794) main: [0m
+[0;32mI (93294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (93294) main: Temperature: 2043[0m
+[0;32mI (93294) main: [0m
+[0;32mI (93794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (93794) main: Temperature: 2043[0m
+[0;32mI (93794) main: [0m
+[0;32mI (94294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (94294) main: Temperature: 2043[0m
+[0;32mI (94294) main: [0m
+[0;32mI (94794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (94794) main: Temperature: 2043[0m
+[0;32mI (94794) main: [0m
+[0;32mI (95294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (95294) main: Temperature: 2043[0m
+[0;32mI (95294) main: [0m
+[0;32mI (95794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (95794) main: Temperature: 2043[0m
+[0;32mI (95794) main: [0m
+[0;32mI (96294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (96294) main: Temperature: 2043[0m
+[0;32mI (96294) main: [0m
+[0;32mI (96794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (96794) main: Temperature: 2043[0m
+[0;32mI (96794) main: [0m
+[0;32mI (97294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (97294) main: Temperature: 2043[0m
+[0;32mI (97294) main: [0m
+[0;32mI (97794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (97794) main: Temperature: 2043[0m
+[0;32mI (97794) main: [0m
+[0;32mI (98294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (98294) main: Temperature: 2043[0m
+[0;32mI (98294) main: [0m
+[0;32mI (98794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (98794) main: Temperature: 2043[0m
+[0;32mI (98794) main: [0m
+[0;32mI (99294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (99294) main: Temperature: 2043[0m
+[0;32mI (99294) main: [0m
+[0;32mI (99794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (99794) main: Temperature: 2043[0m
+[0;32mI (99794) main: [0m
+[0;32mI (100294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (100294) main: Temperature: 2043[0m
+[0;32mI (100294) main: [0m
+[0;32mI (100794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (100794) main: Temperature: 2043[0m
+[0;32mI (100794) main: [0m
+[0;32mI (101294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (101294) main: Temperature: 2044[0m
+[0;32mI (101294) main: [0m
+[0;32mI (101794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (101794) main: Temperature: 2043[0m
+[0;32mI (101794) main: [0m
+[0;32mI (102294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (102294) main: Temperature: 2043[0m
+[0;32mI (102294) main: [0m
+[0;32mI (102794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (102794) main: Temperature: 2043[0m
+[0;32mI (102794) main: [0m
+[0;32mI (103294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (103294) main: Temperature: 2043[0m
+[0;32mI (103294) main: [0m
+[0;32mI (103794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (103794) main: Temperature: 2043[0m
+[0;32mI (103794) main: [0m
+[0;32mI (104294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (104294) main: Temperature: 2041[0m
+[0;32mI (104294) main: [0m
+[0;32mI (104794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (104794) main: Temperature: 2043[0m
+[0;32mI (104794) main: [0m
+[0;32mI (105294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (105294) main: Temperature: 2043[0m
+[0;32mI (105294) main: [0m
+[0;32mI (105794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (105794) main: Temperature: 2043[0m
+[0;32mI (105794) main: [0m
+[0;32mI (106294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (106294) main: Temperature: 2043[0m
+[0;32mI (106294) main: [0m
+[0;32mI (106794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (106794) main: Temperature: 2043[0m
+[0;32mI (106794) main: [0m
+[0;32mI (107294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (107294) main: Temperature: 2043[0m
+[0;32mI (107294) main: [0m
+[0;32mI (107794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (107794) main: Temperature: 2043[0m
+[0;32mI (107794) main: [0m
+[0;32mI (108294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (108294) main: Temperature: 2043[0m
+[0;32mI (108294) main: [0m
+[0;32mI (108794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (108794) main: Temperature: 2043[0m
+[0;32mI (108794) main: [0m
+[0;32mI (109294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (109294) main: Temperature: 2043[0m
+[0;32mI (109294) main: [0m
+[0;32mI (109794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (109794) main: Temperature: 2043[0m
+[0;32mI (109794) main: [0m
+[0;32mI (110294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (110294) main: Temperature: 2043[0m
+[0;32mI (110294) main: [0m
+[0;32mI (110794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (110794) main: Temperature: 2043[0m
+[0;32mI (110794) main: [0m
+[0;32mI (111294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (111294) main: Temperature: 2043[0m
+[0;32mI (111294) main: [0m
+[0;32mI (111794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (111794) main: Temperature: 2043[0m
+[0;32mI (111794) main: [0m
+[0;32mI (112294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (112294) main: Temperature: 2043[0m
+[0;32mI (112294) main: [0m
+[0;32mI (112794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (112794) main: Temperature: 2043[0m
+[0;32mI (112794) main: [0m
+[0;32mI (113294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (113294) main: Temperature: 2043[0m
+[0;32mI (113294) main: [0m
+[0;32mI (113794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (113794) main: Temperature: 2043[0m
+[0;32mI (113794) main: [0m
+[0;32mI (114294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (114294) main: Temperature: 2044[0m
+[0;32mI (114294) main: [0m
+[0;32mI (114794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (114794) main: Temperature: 2043[0m
+[0;32mI (114794) main: [0m
+[0;32mI (115294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (115294) main: Temperature: 2043[0m
+[0;32mI (115294) main: [0m
+[0;32mI (115794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (115794) main: Temperature: 2043[0m
+[0;32mI (115794) main: [0m
+[0;32mI (116294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (116294) main: Temperature: 2043[0m
+[0;32mI (116294) main: [0m
+[0;32mI (116794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (116794) main: Temperature: 2044[0m
+[0;32mI (116794) main: [0m
+[0;32mI (117294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (117294) main: Temperature: 2044[0m
+[0;32mI (117294) main: [0m
+[0;32mI (117794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (117794) main: Temperature: 2043[0m
+[0;32mI (117794) main: [0m
+[0;32mI (118294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (118294) main: Temperature: 2043[0m
+[0;32mI (118294) main: [0m
+[0;32mI (118794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (118794) main: Temperature: 2043[0m
+[0;32mI (118794) main: [0m
+[0;32mI (119294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (119294) main: Temperature: 2043[0m
+[0;32mI (119294) main: [0m
+[0;32mI (119794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (119794) main: Temperature: 2043[0m
+[0;32mI (119794) main: [0m
+[0;32mI (120294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (120294) main: Temperature: 2043[0m
+[0;32mI (120294) main: [0m
+[0;32mI (120794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (120794) main: Temperature: 2043[0m
+[0;32mI (120794) main: [0m
+[0;32mI (121294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (121294) main: Temperature: 2044[0m
+[0;32mI (121294) main: [0m
+[0;32mI (121794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (121794) main: Temperature: 2043[0m
+[0;32mI (121794) main: [0m
+[0;32mI (122294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (122294) main: Temperature: 2043[0m
+[0;32mI (122294) main: [0m
+[0;32mI (122794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (122794) main: Temperature: 2043[0m
+[0;32mI (122794) main: [0m
+[0;32mI (123294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (123294) main: Temperature: 2044[0m
+[0;32mI (123294) main: [0m
+[0;32mI (123794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (123794) main: Temperature: 2043[0m
+[0;32mI (123794) main: [0m
+[0;32mI (124294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (124294) main: Temperature: 2043[0m
+[0;32mI (124294) main: [0m
+[0;32mI (124794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (124794) main: Temperature: 2043[0m
+[0;32mI (124794) main: [0m
+[0;32mI (125294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (125294) main: Temperature: 2043[0m
+[0;32mI (125294) main: [0m
+[0;32mI (125794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (125794) main: Temperature: 2044[0m
+[0;32mI (125794) main: [0m
+[0;32mI (126294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (126294) main: Temperature: 2043[0m
+[0;32mI (126294) main: [0m
+[0;32mI (126794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (126794) main: Temperature: 2043[0m
+[0;32mI (126794) main: [0m
+[0;32mI (127294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (127294) main: Temperature: 2044[0m
+[0;32mI (127294) main: [0m
+[0;32mI (127794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (127794) main: Temperature: 2044[0m
+[0;32mI (127794) main: [0m
+[0;32mI (128294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (128294) main: Temperature: 2043[0m
+[0;32mI (128294) main: [0m
+[0;32mI (128794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (128794) main: Temperature: 2044[0m
+[0;32mI (128794) main: [0m
+[0;32mI (129294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (129294) main: Temperature: 2044[0m
+[0;32mI (129294) main: [0m
+[0;32mI (129794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (129794) main: Temperature: 2044[0m
+[0;32mI (129794) main: [0m
+[0;32mI (130294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (130294) main: Temperature: 2043[0m
+[0;32mI (130294) main: [0m
+[0;32mI (130794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (130794) main: Temperature: 2043[0m
+[0;32mI (130794) main: [0m
+[0;32mI (131294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (131294) main: Temperature: 2043[0m
+[0;32mI (131294) main: [0m
+[0;32mI (131794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (131794) main: Temperature: 2044[0m
+[0;32mI (131794) main: [0m
+[0;32mI (132294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (132294) main: Temperature: 2044[0m
+[0;32mI (132294) main: [0m
+[0;32mI (132794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (132794) main: Temperature: 2044[0m
+[0;32mI (132794) main: [0m
+[0;32mI (133294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (133294) main: Temperature: 2044[0m
+[0;32mI (133294) main: [0m
+[0;32mI (133794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (133794) main: Temperature: 2043[0m
+[0;32mI (133794) main: [0m
+[0;32mI (134294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (134294) main: Temperature: 2043[0m
+[0;32mI (134294) main: [0m
+[0;32mI (134794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (134794) main: Temperature: 2043[0m
+[0;32mI (134794) main: [0m
+[0;32mI (135294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (135294) main: Temperature: 2044[0m
+[0;32mI (135294) main: [0m
+[0;32mI (135794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (135794) main: Temperature: 2043[0m
+[0;32mI (135794) main: [0m
+[0;32mI (136294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (136294) main: Temperature: 2043[0m
+[0;32mI (136294) main: [0m
+[0;32mI (136794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (136794) main: Temperature: 2043[0m
+[0;32mI (136794) main: [0m
+[0;32mI (137294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (137294) main: Temperature: 2043[0m
+[0;32mI (137294) main: [0m
+[0;32mI (137794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (137794) main: Temperature: 2043[0m
+[0;32mI (137794) main: [0m
+[0;32mI (138294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (138294) main: Temperature: 2043[0m
+[0;32mI (138294) main: [0m
+[0;32mI (138794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (138794) main: Temperature: 2043[0m
+[0;32mI (138794) main: [0m
+[0;32mI (139294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (139294) main: Temperature: 2043[0m
+[0;32mI (139294) main: [0m
+[0;32mI (139794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (139794) main: Temperature: 2043[0m
+[0;32mI (139794) main: [0m
+[0;32mI (140294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (140294) main: Temperature: 2043[0m
+[0;32mI (140294) main: [0m
+[0;32mI (140794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (140794) main: Temperature: 2043[0m
+[0;32mI (140794) main: [0m
+[0;32mI (141294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (141294) main: Temperature: 2044[0m
+[0;32mI (141294) main: [0m
+[0;32mI (141794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (141794) main: Temperature: 2043[0m
+[0;32mI (141794) main: [0m
+[0;32mI (142294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (142294) main: Temperature: 2044[0m
+[0;32mI (142294) main: [0m
+[0;32mI (142794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (142794) main: Temperature: 2043[0m
+[0;32mI (142794) main: [0m
+[0;32mI (143294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (143294) main: Temperature: 2043[0m
+[0;32mI (143294) main: [0m
+[0;32mI (143794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (143794) main: Temperature: 2043[0m
+[0;32mI (143794) main: [0m
+[0;32mI (144294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (144294) main: Temperature: 2043[0m
+[0;32mI (144294) main: [0m
+[0;32mI (144794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (144794) main: Temperature: 2043[0m
+[0;32mI (144794) main: [0m
+[0;32mI (145294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (145294) main: Temperature: 2043[0m
+[0;32mI (145294) main: [0m
+[0;32mI (145794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (145794) main: Temperature: 2043[0m
+[0;32mI (145794) main: [0m
+[0;32mI (146294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (146294) main: Temperature: 2043[0m
+[0;32mI (146294) main: [0m
+[0;32mI (146794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (146794) main: Temperature: 2044[0m
+[0;32mI (146794) main: [0m
+[0;32mI (147294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (147294) main: Temperature: 2044[0m
+[0;32mI (147294) main: [0m
+[0;32mI (147794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (147794) main: Temperature: 2043[0m
+[0;32mI (147794) main: [0m
+[0;32mI (148294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (148294) main: Temperature: 2044[0m
+[0;32mI (148294) main: [0m
+[0;32mI (148794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (148794) main: Temperature: 2043[0m
+[0;32mI (148794) main: [0m
+[0;32mI (149294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (149294) main: Temperature: 2044[0m
+[0;32mI (149294) main: [0m
+[0;32mI (149794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (149794) main: Temperature: 2044[0m
+[0;32mI (149794) main: [0m
+[0;32mI (150294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (150294) main: Temperature: 2044[0m
+[0;32mI (150294) main: [0m
+[0;32mI (150794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (150794) main: Temperature: 2043[0m
+[0;32mI (150794) main: [0m
+[0;32mI (151294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (151294) main: Temperature: 2044[0m
+[0;32mI (151294) main: [0m
+[0;32mI (151794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (151794) main: Temperature: 2043[0m
+[0;32mI (151794) main: [0m
+[0;32mI (152294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (152294) main: Temperature: 2044[0m
+[0;32mI (152294) main: [0m
+[0;32mI (152794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (152794) main: Temperature: 2044[0m
+[0;32mI (152794) main: [0m
+[0;32mI (153294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (153294) main: Temperature: 2043[0m
+[0;32mI (153294) main: [0m
+[0;32mI (153794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (153794) main: Temperature: 2043[0m
+[0;32mI (153794) main: [0m
+[0;32mI (154294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (154294) main: Temperature: 2043[0m
+[0;32mI (154294) main: [0m
+[0;32mI (154794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (154794) main: Temperature: 2043[0m
+[0;32mI (154794) main: [0m
+[0;32mI (155294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (155294) main: Temperature: 2044[0m
+[0;32mI (155294) main: [0m
+[0;32mI (155794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (155794) main: Temperature: 2043[0m
+[0;32mI (155794) main: [0m
+[0;32mI (156294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (156294) main: Temperature: 2044[0m
+[0;32mI (156294) main: [0m
+[0;32mI (156794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (156794) main: Temperature: 2043[0m
+[0;32mI (156794) main: [0m
+[0;32mI (157294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (157294) main: Temperature: 2043[0m
+[0;32mI (157294) main: [0m
+[0;32mI (157794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (157794) main: Temperature: 2044[0m
+[0;32mI (157794) main: [0m
+[0;32mI (158294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (158294) main: Temperature: 2044[0m
+[0;32mI (158294) main: [0m
+[0;32mI (158794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (158794) main: Temperature: 2043[0m
+[0;32mI (158794) main: [0m
+[0;32mI (159294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (159294) main: Temperature: 2044[0m
+[0;32mI (159294) main: [0m
+[0;32mI (159794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (159794) main: Temperature: 2043[0m
+[0;32mI (159794) main: [0m
+[0;32mI (160294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (160294) main: Temperature: 2044[0m
+[0;32mI (160294) main: [0m
+[0;32mI (160794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (160794) main: Temperature: 2044[0m
+[0;32mI (160794) main: [0m
+[0;32mI (161294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (161294) main: Temperature: 2043[0m
+[0;32mI (161294) main: [0m
+[0;32mI (161794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (161794) main: Temperature: 2043[0m
+[0;32mI (161794) main: [0m
+[0;32mI (162294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (162294) main: Temperature: 2044[0m
+[0;32mI (162294) main: [0m
+[0;32mI (162794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (162794) main: Temperature: 2044[0m
+[0;32mI (162794) main: [0m
+[0;32mI (163294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (163294) main: Temperature: 2044[0m
+[0;32mI (163294) main: [0m
+[0;32mI (163794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (163794) main: Temperature: 2043[0m
+[0;32mI (163794) main: [0m
+[0;32mI (164294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (164294) main: Temperature: 2043[0m
+[0;32mI (164294) main: [0m
+[0;32mI (164794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (164794) main: Temperature: 2043[0m
+[0;32mI (164794) main: [0m
+[0;32mI (165294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (165294) main: Temperature: 2044[0m
+[0;32mI (165294) main: [0m
+[0;32mI (165794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (165794) main: Temperature: 2044[0m
+[0;32mI (165794) main: [0m
+[0;32mI (166294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (166294) main: Temperature: 2043[0m
+[0;32mI (166294) main: [0m
+[0;32mI (166794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (166794) main: Temperature: 2044[0m
+[0;32mI (166794) main: [0m
+[0;32mI (167294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (167294) main: Temperature: 2043[0m
+[0;32mI (167294) main: [0m
+[0;32mI (167794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (167794) main: Temperature: 2043[0m
+[0;32mI (167794) main: [0m
+[0;32mI (168294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (168294) main: Temperature: 2043[0m
+[0;32mI (168294) main: [0m
+[0;32mI (168794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (168794) main: Temperature: 2044[0m
+[0;32mI (168794) main: [0m
+[0;32mI (169294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (169294) main: Temperature: 2043[0m
+[0;32mI (169294) main: [0m
+[0;32mI (169794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (169794) main: Temperature: 2044[0m
+[0;32mI (169794) main: [0m
+[0;32mI (170294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (170294) main: Temperature: 2044[0m
+[0;32mI (170294) main: [0m
+[0;32mI (170794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (170794) main: Temperature: 2043[0m
+[0;32mI (170794) main: [0m
+[0;32mI (171294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (171294) main: Temperature: 2043[0m
+[0;32mI (171294) main: [0m
+[0;32mI (171794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (171794) main: Temperature: 2044[0m
+[0;32mI (171794) main: [0m
+[0;32mI (172294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (172294) main: Temperature: 2044[0m
+[0;32mI (172294) main: [0m
+[0;32mI (172794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (172794) main: Temperature: 2043[0m
+[0;32mI (172794) main: [0m
+[0;32mI (173294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (173294) main: Temperature: 2044[0m
+[0;32mI (173294) main: [0m
+[0;32mI (173794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (173794) main: Temperature: 2043[0m
+[0;32mI (173794) main: [0m
+[0;32mI (174294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (174294) main: Temperature: 2043[0m
+[0;32mI (174294) main: [0m
+[0;32mI (174794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (174794) main: Temperature: 2044[0m
+[0;32mI (174794) main: [0m
+[0;32mI (175294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (175294) main: Temperature: 2043[0m
+[0;32mI (175294) main: [0m
+[0;32mI (175794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (175794) main: Temperature: 2043[0m
+[0;32mI (175794) main: [0m
+[0;32mI (176294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (176294) main: Temperature: 2043[0m
+[0;32mI (176294) main: [0m
+[0;32mI (176794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (176794) main: Temperature: 2043[0m
+[0;32mI (176794) main: [0m
+[0;32mI (177294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (177294) main: Temperature: 2043[0m
+[0;32mI (177294) main: [0m
+[0;32mI (177794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (177794) main: Temperature: 2043[0m
+[0;32mI (177794) main: [0m
+[0;32mI (178294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (178294) main: Temperature: 2044[0m
+[0;32mI (178294) main: [0m
+[0;32mI (178794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (178794) main: Temperature: 2044[0m
+[0;32mI (178794) main: [0m
+[0;32mI (179294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (179294) main: Temperature: 2043[0m
+[0;32mI (179294) main: [0m
+[0;32mI (179794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (179794) main: Temperature: 2043[0m
+[0;32mI (179794) main: [0m
+[0;32mI (180294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (180294) main: Temperature: 2043[0m
+[0;32mI (180294) main: [0m
+[0;32mI (180794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (180794) main: Temperature: 2043[0m
+[0;32mI (180794) main: [0m
+[0;32mI (181294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (181294) main: Temperature: 2043[0m
+[0;32mI (181294) main: [0m
+[0;32mI (181794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (181794) main: Temperature: 2043[0m
+[0;32mI (181794) main: [0m
+[0;32mI (182294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (182294) main: Temperature: 2043[0m
+[0;32mI (182294) main: [0m
+[0;32mI (182794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (182794) main: Temperature: 2043[0m
+[0;32mI (182794) main: [0m
+[0;32mI (183294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (183294) main: Temperature: 2044[0m
+[0;32mI (183294) main: [0m
+[0;32mI (183794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (183794) main: Temperature: 2043[0m
+[0;32mI (183794) main: [0m
+[0;32mI (184294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (184294) main: Temperature: 2043[0m
+[0;32mI (184294) main: [0m
+[0;32mI (184794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (184794) main: Temperature: 2043[0m
+[0;32mI (184794) main: [0m
+[0;32mI (185294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (185294) main: Temperature: 2044[0m
+[0;32mI (185294) main: [0m
+[0;32mI (185794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (185794) main: Temperature: 2044[0m
+[0;32mI (185794) main: [0m
+[0;32mI (186294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (186294) main: Temperature: 2043[0m
+[0;32mI (186294) main: [0m
+[0;32mI (186794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (186794) main: Temperature: 2043[0m
+[0;32mI (186794) main: [0m
+[0;32mI (187294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (187294) main: Temperature: 2043[0m
+[0;32mI (187294) main: [0m
+[0;32mI (187794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (187794) main: Temperature: 2043[0m
+[0;32mI (187794) main: [0m
+[0;32mI (188294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (188294) main: Temperature: 2043[0m
+[0;32mI (188294) main: [0m
+[0;32mI (188794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (188794) main: Temperature: 2044[0m
+[0;32mI (188794) main: [0m
+[0;32mI (189294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (189294) main: Temperature: 2043[0m
+[0;32mI (189294) main: [0m
+[0;32mI (189794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (189794) main: Temperature: 2043[0m
+[0;32mI (189794) main: [0m
+[0;32mI (190294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (190294) main: Temperature: 2043[0m
+[0;32mI (190294) main: [0m
+[0;32mI (190794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (190794) main: Temperature: 2043[0m
+[0;32mI (190794) main: [0m
+[0;32mI (191294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (191294) main: Temperature: 2043[0m
+[0;32mI (191294) main: [0m
+[0;32mI (191794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (191794) main: Temperature: 2043[0m
+[0;32mI (191794) main: [0m
+[0;32mI (192294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (192294) main: Temperature: 2043[0m
+[0;32mI (192294) main: [0m
+[0;32mI (192794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (192794) main: Temperature: 2044[0m
+[0;32mI (192794) main: [0m
+[0;32mI (193294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (193294) main: Temperature: 2043[0m
+[0;32mI (193294) main: [0m
+[0;32mI (193794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (193794) main: Temperature: 2043[0m
+[0;32mI (193794) main: [0m
+[0;32mI (194294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (194294) main: Temperature: 2043[0m
+[0;32mI (194294) main: [0m
+[0;32mI (194794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (194794) main: Temperature: 2043[0m
+[0;32mI (194794) main: [0m
+[0;32mI (195294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (195294) main: Temperature: 2044[0m
+[0;32mI (195294) main: [0m
+[0;32mI (195794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (195794) main: Temperature: 2044[0m
+[0;32mI (195794) main: [0m
+[0;32mI (196294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (196294) main: Temperature: 2043[0m
+[0;32mI (196294) main: [0m
+[0;32mI (196794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (196794) main: Temperature: 2043[0m
+[0;32mI (196794) main: [0m
+[0;32mI (197294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (197294) main: Temperature: 2043[0m
+[0;32mI (197294) main: [0m
+[0;32mI (197794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (197794) main: Temperature: 2043[0m
+[0;32mI (197794) main: [0m
+[0;32mI (198294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (198294) main: Temperature: 2043[0m
+[0;32mI (198294) main: [0m
+[0;32mI (198794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (198794) main: Temperature: 2044[0m
+[0;32mI (198794) main: [0m
+[0;32mI (199294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (199294) main: Temperature: 2043[0m
+[0;32mI (199294) main: [0m
+[0;32mI (199794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (199794) main: Temperature: 2043[0m
+[0;32mI (199794) main: [0m
+[0;32mI (200294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (200294) main: Temperature: 2043[0m
+[0;32mI (200294) main: [0m
+[0;32mI (200794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (200794) main: Temperature: 2043[0m
+[0;32mI (200794) main: [0m
+[0;32mI (201294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (201294) main: Temperature: 2043[0m
+[0;32mI (201294) main: [0m
+[0;32mI (201794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (201794) main: Temperature: 2043[0m
+[0;32mI (201794) main: [0m
+[0;32mI (202294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (202294) main: Temperature: 2043[0m
+[0;32mI (202294) main: [0m
+[0;32mI (202794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (202794) main: Temperature: 2043[0m
+[0;32mI (202794) main: [0m
+[0;32mI (203294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (203294) main: Temperature: 2043[0m
+[0;32mI (203294) main: [0m
+[0;32mI (203794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (203794) main: Temperature: 2043[0m
+[0;32mI (203794) main: [0m
+[0;32mI (204294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (204294) main: Temperature: 2043[0m
+[0;32mI (204294) main: [0m
+[0;32mI (204794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (204794) main: Temperature: 2043[0m
+[0;32mI (204794) main: [0m
+[0;32mI (205294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (205294) main: Temperature: 2044[0m
+[0;32mI (205294) main: [0m
+[0;32mI (205794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (205794) main: Temperature: 2043[0m
+[0;32mI (205794) main: [0m
+[0;32mI (206294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (206294) main: Temperature: 2043[0m
+[0;32mI (206294) main: [0m
+[0;32mI (206794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (206794) main: Temperature: 2043[0m
+[0;32mI (206794) main: [0m
+[0;32mI (207294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (207294) main: Temperature: 2043[0m
+[0;32mI (207294) main: [0m
+[0;32mI (207794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (207794) main: Temperature: 2043[0m
+[0;32mI (207794) main: [0m
+[0;32mI (208294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (208294) main: Temperature: 2043[0m
+[0;32mI (208294) main: [0m
+[0;32mI (208794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (208794) main: Temperature: 2043[0m
+[0;32mI (208794) main: [0m
+[0;32mI (209294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (209294) main: Temperature: 2043[0m
+[0;32mI (209294) main: [0m
+[0;32mI (209794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (209794) main: Temperature: 2043[0m
+[0;32mI (209794) main: [0m
+[0;32mI (210294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (210294) main: Temperature: 2043[0m
+[0;32mI (210294) main: [0m
+[0;32mI (210794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (210794) main: Temperature: 2043[0m
+[0;32mI (210794) main: [0m
+[0;32mI (211294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (211294) main: Temperature: 2041[0m
+[0;32mI (211294) main: [0m
+[0;32mI (211794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (211794) main: Temperature: 2043[0m
+[0;32mI (211794) main: [0m
+[0;32mI (212294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (212294) main: Temperature: 2044[0m
+[0;32mI (212294) main: [0m
+[0;32mI (212794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (212794) main: Temperature: 2043[0m
+[0;32mI (212794) main: [0m
+[0;32mI (213294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (213294) main: Temperature: 2044[0m
+[0;32mI (213294) main: [0m
+[0;32mI (213794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (213794) main: Temperature: 2043[0m
+[0;32mI (213794) main: [0m
+[0;32mI (214294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (214294) main: Temperature: 2044[0m
+[0;32mI (214294) main: [0m
+[0;32mI (214794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (214794) main: Temperature: 2043[0m
+[0;32mI (214794) main: [0m
+[0;32mI (215294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (215294) main: Temperature: 2044[0m
+[0;32mI (215294) main: [0m
+[0;32mI (215794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (215794) main: Temperature: 2043[0m
+[0;32mI (215794) main: [0m
+[0;32mI (216294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (216294) main: Temperature: 2043[0m
+[0;32mI (216294) main: [0m
+[0;32mI (216794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (216794) main: Temperature: 2043[0m
+[0;32mI (216794) main: [0m
+[0;32mI (217294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (217294) main: Temperature: 2044[0m
+[0;32mI (217294) main: [0m
+[0;32mI (217794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (217794) main: Temperature: 2043[0m
+[0;32mI (217794) main: [0m
+[0;32mI (218294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (218294) main: Temperature: 2043[0m
+[0;32mI (218294) main: [0m
+[0;32mI (218794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (218794) main: Temperature: 2043[0m
+[0;32mI (218794) main: [0m
+[0;32mI (219294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (219294) main: Temperature: 2043[0m
+[0;32mI (219294) main: [0m
+[0;32mI (219794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (219794) main: Temperature: 2043[0m
+[0;32mI (219794) main: [0m
+[0;32mI (220294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (220294) main: Temperature: 2043[0m
+[0;32mI (220294) main: [0m
+[0;32mI (220794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (220794) main: Temperature: 2043[0m
+[0;32mI (220794) main: [0m
+[0;32mI (221294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (221294) main: Temperature: 2043[0m
+[0;32mI (221294) main: [0m
+[0;32mI (221794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (221794) main: Temperature: 2043[0m
+[0;32mI (221794) main: [0m
+[0;32mI (222294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (222294) main: Temperature: 2044[0m
+[0;32mI (222294) main: [0m
+[0;32mI (222794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (222794) main: Temperature: 2043[0m
+[0;32mI (222794) main: [0m
+[0;32mI (223294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (223294) main: Temperature: 2044[0m
+[0;32mI (223294) main: [0m
+[0;32mI (223794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (223794) main: Temperature: 2043[0m
+[0;32mI (223794) main: [0m
+[0;32mI (224294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (224294) main: Temperature: 2043[0m
+[0;32mI (224294) main: [0m
+[0;32mI (224794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (224794) main: Temperature: 2043[0m
+[0;32mI (224794) main: [0m
+[0;32mI (225294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (225294) main: Temperature: 2044[0m
+[0;32mI (225294) main: [0m
+[0;32mI (225794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (225794) main: Temperature: 2043[0m
+[0;32mI (225794) main: [0m
+[0;32mI (226294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (226294) main: Temperature: 2044[0m
+[0;32mI (226294) main: [0m
+[0;32mI (226794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (226794) main: Temperature: 2043[0m
+[0;32mI (226794) main: [0m
+[0;32mI (227294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (227294) main: Temperature: 2044[0m
+[0;32mI (227294) main: [0m
+[0;32mI (227794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (227794) main: Temperature: 2043[0m
+[0;32mI (227794) main: [0m
+[0;32mI (228294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (228294) main: Temperature: 2044[0m
+[0;32mI (228294) main: [0m
+[0;32mI (228794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (228794) main: Temperature: 2043[0m
+[0;32mI (228794) main: [0m
+[0;32mI (229294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (229294) main: Temperature: 2044[0m
+[0;32mI (229294) main: [0m
+[0;32mI (229794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (229794) main: Temperature: 2043[0m
+[0;32mI (229794) main: [0m
+[0;32mI (230294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (230294) main: Temperature: 2043[0m
+[0;32mI (230294) main: [0m
+[0;32mI (230794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (230794) main: Temperature: 2044[0m
+[0;32mI (230794) main: [0m
+[0;32mI (231294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (231294) main: Temperature: 2043[0m
+[0;32mI (231294) main: [0m
+[0;32mI (231794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (231794) main: Temperature: 2043[0m
+[0;32mI (231794) main: [0m
+[0;32mI (232294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (232294) main: Temperature: 2043[0m
+[0;32mI (232294) main: [0m
+[0;32mI (232794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (232794) main: Temperature: 2043[0m
+[0;32mI (232794) main: [0m
+[0;32mI (233294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (233294) main: Temperature: 2043[0m
+[0;32mI (233294) main: [0m
+[0;32mI (233794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (233794) main: Temperature: 2043[0m
+[0;32mI (233794) main: [0m
+[0;32mI (234294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (234294) main: Temperature: 2043[0m
+[0;32mI (234294) main: [0m
+[0;32mI (234794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (234794) main: Temperature: 2043[0m
+[0;32mI (234794) main: [0m
+[0;32mI (235294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (235294) main: Temperature: 2043[0m
+[0;32mI (235294) main: [0m
+[0;32mI (235794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (235794) main: Temperature: 2044[0m
+[0;32mI (235794) main: [0m
+[0;32mI (236294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (236294) main: Temperature: 2043[0m
+[0;32mI (236294) main: [0m
+[0;32mI (236794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (236794) main: Temperature: 2044[0m
+[0;32mI (236794) main: [0m
+[0;32mI (237294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (237294) main: Temperature: 2043[0m
+[0;32mI (237294) main: [0m
+[0;32mI (237794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (237794) main: Temperature: 2043[0m
+[0;32mI (237794) main: [0m
+[0;32mI (238294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (238294) main: Temperature: 2043[0m
+[0;32mI (238294) main: [0m
+[0;32mI (238794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (238794) main: Temperature: 2043[0m
+[0;32mI (238794) main: [0m
+[0;32mI (239294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (239294) main: Temperature: 2043[0m
+[0;32mI (239294) main: [0m
+[0;32mI (239794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (239794) main: Temperature: 2043[0m
+[0;32mI (239794) main: [0m
+[0;32mI (240294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (240294) main: Temperature: 2044[0m
+[0;32mI (240294) main: [0m
+[0;32mI (240794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (240794) main: Temperature: 2043[0m
+[0;32mI (240794) main: [0m
+[0;32mI (241294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (241294) main: Temperature: 2043[0m
+[0;32mI (241294) main: [0m
+[0;32mI (241794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (241794) main: Temperature: 2043[0m
+[0;32mI (241794) main: [0m
+[0;32mI (242294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (242294) main: Temperature: 2043[0m
+[0;32mI (242294) main: [0m
+[0;32mI (242794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (242794) main: Temperature: 2043[0m
+[0;32mI (242794) main: [0m
+[0;32mI (243294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (243294) main: Temperature: 2043[0m
+[0;32mI (243294) main: [0m
+[0;32mI (243794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (243794) main: Temperature: 2043[0m
+[0;32mI (243794) main: [0m
+[0;32mI (244294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (244294) main: Temperature: 2043[0m
+[0;32mI (244294) main: [0m
+[0;32mI (244794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (244794) main: Temperature: 2043[0m
+[0;32mI (244794) main: [0m
+[0;32mI (245294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (245294) main: Temperature: 2043[0m
+[0;32mI (245294) main: [0m
+[0;32mI (245794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (245794) main: Temperature: 2043[0m
+[0;32mI (245794) main: [0m
+[0;32mI (246294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (246294) main: Temperature: 2044[0m
+[0;32mI (246294) main: [0m
+[0;32mI (246794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (246794) main: Temperature: 2043[0m
+[0;32mI (246794) main: [0m
+[0;32mI (247294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (247294) main: Temperature: 2043[0m
+[0;32mI (247294) main: [0m
+[0;32mI (247794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (247794) main: Temperature: 2044[0m
+[0;32mI (247794) main: [0m
+[0;32mI (248294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (248294) main: Temperature: 2043[0m
+[0;32mI (248294) main: [0m
+[0;32mI (248794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (248794) main: Temperature: 2043[0m
+[0;32mI (248794) main: [0m
+[0;32mI (249294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (249294) main: Temperature: 2043[0m
+[0;32mI (249294) main: [0m
+[0;32mI (249794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (249794) main: Temperature: 2044[0m
+[0;32mI (249794) main: [0m
+[0;32mI (250294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (250294) main: Temperature: 2043[0m
+[0;32mI (250294) main: [0m
+[0;32mI (250794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (250794) main: Temperature: 2044[0m
+[0;32mI (250794) main: [0m
+[0;32mI (251294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (251294) main: Temperature: 2043[0m
+[0;32mI (251294) main: [0m
+[0;32mI (251794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (251794) main: Temperature: 2044[0m
+[0;32mI (251794) main: [0m
+[0;32mI (252294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (252294) main: Temperature: 2043[0m
+[0;32mI (252294) main: [0m
+[0;32mI (252794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (252794) main: Temperature: 2043[0m
+[0;32mI (252794) main: [0m
+[0;32mI (253294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (253294) main: Temperature: 2043[0m
+[0;32mI (253294) main: [0m
+[0;32mI (253794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (253794) main: Temperature: 2043[0m
+[0;32mI (253794) main: [0m
+[0;32mI (254294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (254294) main: Temperature: 2043[0m
+[0;32mI (254294) main: [0m
+[0;32mI (254794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (254794) main: Temperature: 2043[0m
+[0;32mI (254794) main: [0m
+[0;32mI (255294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (255294) main: Temperature: 2043[0m
+[0;32mI (255294) main: [0m
+[0;32mI (255794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (255794) main: Temperature: 2043[0m
+[0;32mI (255794) main: [0m
+[0;32mI (256294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (256294) main: Temperature: 2044[0m
+[0;32mI (256294) main: [0m
+[0;32mI (256794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (256794) main: Temperature: 2044[0m
+[0;32mI (256794) main: [0m
+[0;32mI (257294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (257294) main: Temperature: 2043[0m
+[0;32mI (257294) main: [0m
+[0;32mI (257794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (257794) main: Temperature: 2043[0m
+[0;32mI (257794) main: [0m
+[0;32mI (258294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (258294) main: Temperature: 2043[0m
+[0;32mI (258294) main: [0m
+[0;32mI (258794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (258794) main: Temperature: 2044[0m
+[0;32mI (258794) main: [0m
+[0;32mI (259294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (259294) main: Temperature: 2043[0m
+[0;32mI (259294) main: [0m
+[0;32mI (259794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (259794) main: Temperature: 2044[0m
+[0;32mI (259794) main: [0m
+[0;32mI (260294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (260294) main: Temperature: 2044[0m
+[0;32mI (260294) main: [0m
+[0;32mI (260794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (260794) main: Temperature: 2044[0m
+[0;32mI (260794) main: [0m
+[0;32mI (261294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (261294) main: Temperature: 2044[0m
+[0;32mI (261294) main: [0m
+[0;32mI (261794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (261794) main: Temperature: 2044[0m
+[0;32mI (261794) main: [0m
+[0;32mI (262294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (262294) main: Temperature: 2044[0m
+[0;32mI (262294) main: [0m
+[0;32mI (262794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (262794) main: Temperature: 2044[0m
+[0;32mI (262794) main: [0m
+[0;32mI (263294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (263294) main: Temperature: 2043[0m
+[0;32mI (263294) main: [0m
+[0;32mI (263794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (263794) main: Temperature: 2044[0m
+[0;32mI (263794) main: [0m
+[0;32mI (264294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (264294) main: Temperature: 2044[0m
+[0;32mI (264294) main: [0m
+[0;32mI (264794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (264794) main: Temperature: 2044[0m
+[0;32mI (264794) main: [0m
+[0;32mI (265294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (265294) main: Temperature: 2044[0m
+[0;32mI (265294) main: [0m
+[0;32mI (265794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (265794) main: Temperature: 2044[0m
+[0;32mI (265794) main: [0m
+[0;32mI (266294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (266294) main: Temperature: 2043[0m
+[0;32mI (266294) main: [0m
+[0;32mI (266794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (266794) main: Temperature: 2044[0m
+[0;32mI (266794) main: [0m
+[0;32mI (267294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (267294) main: Temperature: 2043[0m
+[0;32mI (267294) main: [0m
+[0;32mI (267794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (267794) main: Temperature: 2043[0m
+[0;32mI (267794) main: [0m
+[0;32mI (268294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (268294) main: Temperature: 2044[0m
+[0;32mI (268294) main: [0m
+[0;32mI (268794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (268794) main: Temperature: 2044[0m
+[0;32mI (268794) main: [0m
+[0;32mI (269294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (269294) main: Temperature: 2044[0m
+[0;32mI (269294) main: [0m
+[0;32mI (269794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (269794) main: Temperature: 2044[0m
+[0;32mI (269794) main: [0m
+[0;32mI (270294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (270294) main: Temperature: 2044[0m
+[0;32mI (270294) main: [0m
+[0;32mI (270794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (270794) main: Temperature: 2043[0m
+[0;32mI (270794) main: [0m
+[0;32mI (271294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (271294) main: Temperature: 2044[0m
+[0;32mI (271294) main: [0m
+[0;32mI (271794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (271794) main: Temperature: 2044[0m
+[0;32mI (271794) main: [0m
+[0;32mI (272294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (272294) main: Temperature: 2044[0m
+[0;32mI (272294) main: [0m
+[0;32mI (272794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (272794) main: Temperature: 2044[0m
+[0;32mI (272794) main: [0m
+[0;32mI (273294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (273294) main: Temperature: 2044[0m
+[0;32mI (273294) main: [0m
+[0;32mI (273794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (273794) main: Temperature: 2044[0m
+[0;32mI (273794) main: [0m
+[0;32mI (274294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (274294) main: Temperature: 2044[0m
+[0;32mI (274294) main: [0m
+[0;32mI (274794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (274794) main: Temperature: 2044[0m
+[0;32mI (274794) main: [0m
+[0;32mI (275294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (275294) main: Temperature: 2044[0m
+[0;32mI (275294) main: [0m
+[0;32mI (275794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (275794) main: Temperature: 2044[0m
+[0;32mI (275794) main: [0m
+[0;32mI (276294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (276294) main: Temperature: 2043[0m
+[0;32mI (276294) main: [0m
+[0;32mI (276794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (276794) main: Temperature: 2044[0m
+[0;32mI (276794) main: [0m
+[0;32mI (277294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (277294) main: Temperature: 2043[0m
+[0;32mI (277294) main: [0m
+[0;32mI (277794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (277794) main: Temperature: 2043[0m
+[0;32mI (277794) main: [0m
+[0;32mI (278294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (278294) main: Temperature: 2044[0m
+[0;32mI (278294) main: [0m
+[0;32mI (278794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (278794) main: Temperature: 2044[0m
+[0;32mI (278794) main: [0m
+[0;32mI (279294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (279294) main: Temperature: 2043[0m
+[0;32mI (279294) main: [0m
+[0;32mI (279794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (279794) main: Temperature: 2043[0m
+[0;32mI (279794) main: [0m
+[0;32mI (280294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (280294) main: Temperature: 2043[0m
+[0;32mI (280294) main: [0m
+[0;32mI (280794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (280794) main: Temperature: 2043[0m
+[0;32mI (280794) main: [0m
+[0;32mI (281294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (281294) main: Temperature: 2044[0m
+[0;32mI (281294) main: [0m
+[0;32mI (281794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (281794) main: Temperature: 2044[0m
+[0;32mI (281794) main: [0m
+[0;32mI (282294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (282294) main: Temperature: 2044[0m
+[0;32mI (282294) main: [0m
+[0;32mI (282794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (282794) main: Temperature: 2044[0m
+[0;32mI (282794) main: [0m
+[0;32mI (283294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (283294) main: Temperature: 2044[0m
+[0;32mI (283294) main: [0m
+[0;32mI (283794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (283794) main: Temperature: 2044[0m
+[0;32mI (283794) main: [0m
+[0;32mI (284294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (284294) main: Temperature: 2044[0m
+[0;32mI (284294) main: [0m
+[0;32mI (284794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (284794) main: Temperature: 2044[0m
+[0;32mI (284794) main: [0m
+[0;32mI (285294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (285294) main: Temperature: 2044[0m
+[0;32mI (285294) main: [0m
+[0;32mI (285794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (285794) main: Temperature: 2044[0m
+[0;32mI (285794) main: [0m
+[0;32mI (286294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (286294) main: Temperature: 2043[0m
+[0;32mI (286294) main: [0m
+[0;32mI (286794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (286794) main: Temperature: 2044[0m
+[0;32mI (286794) main: [0m
+[0;32mI (287294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (287294) main: Temperature: 2044[0m
+[0;32mI (287294) main: [0m
+[0;32mI (287794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (287794) main: Temperature: 2044[0m
+[0;32mI (287794) main: [0m
+[0;32mI (288294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (288294) main: Temperature: 2044[0m
+[0;32mI (288294) main: [0m
+[0;32mI (288794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (288794) main: Temperature: 2044[0m
+[0;32mI (288794) main: [0m
+[0;32mI (289294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (289294) main: Temperature: 2044[0m
+[0;32mI (289294) main: [0m
+[0;32mI (289794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (289794) main: Temperature: 2044[0m
+[0;32mI (289794) main: [0m
+[0;32mI (290294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (290294) main: Temperature: 2043[0m
+[0;32mI (290294) main: [0m
+[0;32mI (290794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (290794) main: Temperature: 2044[0m
+[0;32mI (290794) main: [0m
+[0;32mI (291294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (291294) main: Temperature: 2043[0m
+[0;32mI (291294) main: [0m
+[0;32mI (291794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (291794) main: Temperature: 2044[0m
+[0;32mI (291794) main: [0m
+[0;32mI (292294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (292294) main: Temperature: 2044[0m
+[0;32mI (292294) main: [0m
+[0;32mI (292794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (292794) main: Temperature: 2044[0m
+[0;32mI (292794) main: [0m
+[0;32mI (293294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (293294) main: Temperature: 2044[0m
+[0;32mI (293294) main: [0m
+[0;32mI (293794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (293794) main: Temperature: 2044[0m
+[0;32mI (293794) main: [0m
+[0;32mI (294294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (294294) main: Temperature: 2044[0m
+[0;32mI (294294) main: [0m
+[0;32mI (294794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (294794) main: Temperature: 2044[0m
+[0;32mI (294794) main: [0m
+[0;32mI (295294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (295294) main: Temperature: 2043[0m
+[0;32mI (295294) main: [0m
+[0;32mI (295794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (295794) main: Temperature: 2044[0m
+[0;32mI (295794) main: [0m
+[0;32mI (296294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (296294) main: Temperature: 2044[0m
+[0;32mI (296294) main: [0m
+[0;32mI (296794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (296794) main: Temperature: 2044[0m
+[0;32mI (296794) main: [0m
+[0;32mI (297294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (297294) main: Temperature: 2044[0m
+[0;32mI (297294) main: [0m
+[0;32mI (297794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (297794) main: Temperature: 2044[0m
+[0;32mI (297794) main: [0m
+[0;32mI (298294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (298294) main: Temperature: 2043[0m
+[0;32mI (298294) main: [0m
+[0;32mI (298794) SPI: Transaction Size: 48 bits[0m
+[0;32mI (298794) main: Temperature: 2044[0m
+[0;32mI (298794) main: [0m
+[0;32mI (299294) SPI: Transaction Size: 48 bits[0m
+[0;32mI (299294) main: Temperature:

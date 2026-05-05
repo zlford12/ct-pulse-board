@@ -1,0 +1,146 @@
+Command: /home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python /home/levi/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/levi/CLionProjects/maestro/build/maestro.elf /home/levi/CLionProjects/maestro/build/bootloader/bootloader.elf -m '/home/levi/.espressif/python_env/idf6.1_py3.10_env/bin/python' '/home/levi/esp-idf/tools/idf.py'
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-1323-gf6aaf22278-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 29 2025 16:42:56[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=19fe0h (106464) map[0m
+[0;32mI (128) esp_image: segment 1: paddr=0002a008 vaddr=3ffb0000 size=04354h ( 17236) load[0m
+[0;32mI (135) esp_image: segment 2: paddr=0002e364 vaddr=40080000 size=01cb4h (  7348) load[0m
+[0;32mI (138) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=81b68h (531304) map[0m
+[0;32mI (328) esp_image: segment 4: paddr=000b1b90 vaddr=40081cb4 size=15630h ( 87600) load[0m
+[0;32mI (364) esp_image: segment 5: paddr=000c71c8 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (376) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (376) boot: Disabling RNG early entropy source...[0m
+[0;32mI (387) cpu_start: Multicore app[0m
+[0;32mI (395) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (395) cpu_start: Pro cpu start user code[0m
+[0;32mI (395) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (397) app_init: Application information:[0m
+[0;32mI (401) app_init: Project name:     maestro[0m
+[0;32mI (405) app_init: App version:      53c9664-dirty[0m
+[0;32mI (409) app_init: Compile time:     Dec 31 2025 10:54:16[0m
+[0;32mI (414) app_init: ELF file SHA256:  b0abfaa0d...[0m
+[0;32mI (419) app_init: ESP-IDF:          v6.1-dev-1323-gf6aaf22278-dirty[0m
+[0;32mI (425) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (428) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (432) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (437) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (443) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (448) heap_init: At 3FFB87C8 len 00027838 (158 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 400972E4 len 00008D1C (35 KiB): IRAM[0m
+[0;32mI (471) spi_flash: detected chip: generic[0m
+[0;32mI (473) spi_flash: flash io: dio[0m
+[0;33mW (476) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (489) main_task: Started on CPU0[0m
+[0;32mI (499) main_task: Calling app_main()[0m
+[0;32mI (499) SPI: Initializing bus SPI2...[0m
+[0;32mI (499) encoders: Initializing Encoders...[0m
+[0;32mI (499) SPI: Adding SPI Device on GPIO4...[0m
+[0;32mI (499) SPI: Configuring Temperature Sensor...[0m
+[0;32mI (509) SPI: Transaction Size: 16 bits[0m
+[0;32mI (509) WIFI: Configuring WiFi...[0m
+[0;32mI (549) wifi:wifi driver task: 3ffbffa8, prio:23, stack:6656, core=0[0m
+[0;32mI (559) wifi:wifi firmware version: 02f368a[0m
+[0;32mI (559) wifi:wifi certification version: v7.0[0m
+[0;32mI (559) wifi:config NVS flash: enabled[0m
+[0;32mI (559) wifi:config nano formatting: disabled[0m
+[0;32mI (569) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (569) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (579) wifi:Init management short buffer num: 32[0m
+[0;32mI (579) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (579) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (589) wifi:Init static rx buffer num: 10[0m
+[0;32mI (589) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (599) wifi_init: rx ba win: 6[0m
+[0;32mI (599) wifi_init: accept mbox: 6[0m
+[0;32mI (599) wifi_init: tcpip mbox: 32[0m
+[0;32mI (599) wifi_init: udp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp mbox: 6[0m
+[0;32mI (609) wifi_init: tcp tx win: 5760[0m
+[0;32mI (609) wifi_init: tcp rx win: 5760[0m
+[0;32mI (619) wifi_init: tcp mss: 1440[0m
+[0;32mI (619) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (619) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (629) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (639) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (719) wifi:mode : sta (7c:9e:bd:49:15:c8)[0m
+[0;32mI (719) wifi:enable tsf[0m
+[1;31mE (719) socket: Creating Socket...[0m
+[0;32mI (719) socket: Socket listening on port 6969[0m
+[0;33mW (719) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (719) WIFI: WiFi not connected[0m
+[0;32mI (729) WIFI: Connecting...[0m
+[0;32mI (739) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (749) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (749) wifi:state: auth -> init (0x2c0)[0m
+[0;32mI (769) wifi:new:<8,0>, old:<8,0>, ap:<255,255>, sta:<8,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;33mW (1729) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (1729) WIFI: WiFi not connected[0m
+[0;32mI (1729) WIFI: Connecting...[0m
+[0;33mW (2729) wifi:Haven't to connect to a suitable AP now![0m
+[0;32mI (2729) WIFI: WiFi not connected[0m
+[0;32mI (2729) WIFI: Connecting...[0m
+[1;31mE (2729) wifi:sta is connecting, return error[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3007 (ESP_ERR_WIFI_CONN) at 0x400da77f
+file: "./main/wifi_helper.c" line 60
+func: WifiConnect
+expression: wifi_ret
+
+abort() was called at PC 0x4008b383 on core 0
+
+
+Backtrace: 0x4008b429:0x3ffba940 0x4008b3f1:0x3ffba960 0x4008ae35:0x3ffba980 0x4008b383:0x3ffba9f0 0x400da77f:0x3ffbaa20 0x400da3fb:0x3ffbaa40 0x400d4df2:0x3ffbaab0 0x4014dbca:0x3ffbaae0
+
+
+
+
+ELF file SHA256: b0abfaa0d
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (29) boot: ESP-IDF v6.1-dev-1323-gf6aaf22278-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Dec 29 2025 16:42:56[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (33) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (43) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (51) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (73) boot:  2 factory          facto

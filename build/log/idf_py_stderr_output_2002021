@@ -1,0 +1,5 @@
+Command: make -j 18 all
+In file included from /home/levi/CLionProjects/maestro/main/maestro.c:11:
+/home/levi/CLionProjects/maestro/main/scan.h:6:13: warning: 'PulseTimer' declared 'static' but never defined [-Wunused-function]
+    6 | static void PulseTimer(void *arg);
+      |             ^~~~~~~~~~
