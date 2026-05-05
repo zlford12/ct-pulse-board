@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "encoders.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "sdkconfig.h"
@@ -10,7 +9,6 @@
 #include "nvs.h"
 #include "scan.h"
 #include "socket_helper.h"
-#include "spi_helper.h"
 #include "wifi_helper.h"
 #include "soc/rtc.h"
 
@@ -18,20 +16,18 @@ static constexpr char TAG[] = "main";
 
 void app_main(void)
 {
-    SPI_BusConfig();
-    EncoderInit();
-    //WifiConfig();
-    EthernetConfig();
+    WifiConfig();
+    //EthernetConfig();
     SocketInit();
     ScanInit();
 
     while (1) {
-        //if (!WifiConnected())
-        //{
-        //    WifiConnect();
-        //    vTaskDelay(2000 / portTICK_PERIOD_MS);
-        //    continue;
-        //}
+        if (!WifiConnected())
+        {
+            WifiConnect();
+            vTaskDelay(2000 / portTICK_PERIOD_MS);
+            continue;
+        }
 
         soc_rtc_slow_clk_src_t rtc_clk_src = rtc_clk_slow_src_get();
         if (rtc_clk_src == SOC_RTC_SLOW_CLK_SRC_XTAL32K) {

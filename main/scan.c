@@ -1,7 +1,6 @@
 #include "scan.h"
 #include <stdint.h>
 #include "pins.h"
-#include "encoders.h"
 #include "esp_log.h"
 #include "esp_timer.h"
 #include "socket_helper.h"
@@ -10,8 +9,8 @@
 #include "freertos/task.h"
 #include "esp_rom_sys.h"
 
-#define MIN_PULSE_FREQ 2
-#define MAX_PULSE_FREQ 400
+#define MIN_PULSE_FREQ 1
+#define MAX_PULSE_FREQ 4
 #define MAX_LINE_SIZE 256
 #define ROI_TIMEOUT 10000000
 
@@ -41,14 +40,12 @@ void ScanInit()
     gpio_config_t io_conf = {};
     io_conf.intr_type = GPIO_INTR_DISABLE;
     io_conf.mode = GPIO_MODE_OUTPUT;
-    io_conf.pin_bit_mask = (1ULL << LINAC_PIN) | (1ULL << LDA_TRIGGER) | (1ULL << LDA_TRIGDAT0);
+    io_conf.pin_bit_mask = (1ULL << PANEL_TRIGGER);
     io_conf.pull_down_en = GPIO_PULLDOWN_DISABLE;
     io_conf.pull_up_en = GPIO_PULLUP_DISABLE;
     gpio_config(&io_conf);
 
-    gpio_set_drive_capability(LINAC_PIN, GPIO_DRIVE_CAP_3);
-    gpio_set_drive_capability(LDA_TRIGGER, GPIO_DRIVE_CAP_3);
-    gpio_set_drive_capability(LDA_TRIGDAT0, GPIO_DRIVE_CAP_3);
+    gpio_set_drive_capability(PANEL_TRIGGER, GPIO_DRIVE_CAP_3);
 
     ESP_ERROR_CHECK(esp_timer_create(&pulse_timer_args, &pulse_timer));
     ESP_ERROR_CHECK(esp_timer_create(&roi_timer_args, &roi_timeout));
@@ -104,37 +101,16 @@ static void PulseTimer(void *arg)
     // create 50% duty cycle pulse
     pulse_state = !pulse_state;
 
-    // set trigdat on rising edges
-    if (pulse_state)
-    {
-        gpio_set_level(LDA_TRIGDAT0, 1);
-    }
-
     // linac/lda trigger lags pulse_state
     esp_rom_delay_us(5);
-    gpio_set_level(LINAC_PIN, pulse_state);
-    gpio_set_level(LDA_TRIGGER, acquire && pulse_state);
+    gpio_set_level(PANEL_TRIGGER, acquire && pulse_state);
 
     if (!pulse_state)
     {
         return;
     }
 
-    // clear trigdat after rising edge
-    esp_rom_delay_us(5);
-    gpio_set_level(LDA_TRIGDAT0, 0);
-
-    // conditionally read translate encoder on rising edges
     bool acquire_cache = acquire;
-    if (read_encoders)
-    {
-        uint8_t RxData[6];
-        ReadEncoders(RxData);
-        position = (RxData[3] << 8) | RxData[4];
-        position = (position << 4) | (RxData[5] >> 4);
-
-        acquire = (position >= roi_min) && (position <= roi_max);
-    }
 
     if (acquire_cache)
     {
