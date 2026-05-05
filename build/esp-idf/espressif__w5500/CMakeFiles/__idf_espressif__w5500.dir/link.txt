@@ -1,2 +1,0 @@
-/home/levi/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ar qc libespressif__w5500.a CMakeFiles/__idf_espressif__w5500.dir/src/esp_eth_mac_w5500.c.obj CMakeFiles/__idf_espressif__w5500.dir/src/esp_eth_phy_w5500.c.obj
-/home/levi/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-ranlib libespressif__w5500.a
