@@ -91,6 +91,7 @@ void RunScan()
 
     ESP_LOGI(TAG, "Pulse Train Started");
     remaining_pulses = pulse_count;
+    esp_timer_stop(scan_timeout);
     ESP_ERROR_CHECK(esp_timer_start_periodic(pulse_timer, 1000000 / (2 * pulse_freq)));
     xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
 }
