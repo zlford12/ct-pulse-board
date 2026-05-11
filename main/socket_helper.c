@@ -73,7 +73,7 @@ void SendFrames(const uint32_t *buff, uint32_t size)
     char text_buf[32]; // Buffer for one number string
 
     for (uint32_t i = 0; i < count; i++) {
-        int len = snprintf(text_buf, sizeof(text_buf), "%lu\n", buff[i]);
+        int len = snprintf(text_buf, sizeof(text_buf), "%lu", buff[i]);
         write(client_sock, text_buf, len);
     }
 }
@@ -81,7 +81,7 @@ void SendFrames(const uint32_t *buff, uint32_t size)
 void SendResponse(const char *response)
 {
     char buffer[256];
-    snprintf(buffer, sizeof(buffer), "%s\n", response);
+    snprintf(buffer, sizeof(buffer), "%s", response);
     write(client_sock, buffer, strlen(buffer));
 }
 

@@ -5,7 +5,6 @@
 #include "freertos/task.h"
 #include "sdkconfig.h"
 #include "esp_log.h"
-#include "eth_helper.h"
 #include "nvs.h"
 #include "scan.h"
 #include "socket_helper.h"
@@ -46,7 +45,7 @@ void app_main(void)
         }
         else if (strncmp(cmd, "setfreq ", 8) == 0)
         {
-            uint16_t new_freq = atoi(cmd + 8);
+            float new_freq = strtof(cmd + 8, nullptr);
             if (new_freq > 0)
             {
                 SetPulseFrequency(new_freq);
@@ -57,26 +56,16 @@ void app_main(void)
                 SendResponse("invalid");
             }
         }
-        else if (strncmp(cmd, "setroi ", 7) == 0)
+        else if (strncmp(cmd, "setcount ", 9) == 0)
         {
-            char* comma = strchr(cmd + 7, ',');
-            if (comma != NULL)
+            unsigned long parsed = strtoul(cmd + 9, nullptr, 10);
+            if (parsed > 0 && parsed <= UINT16_MAX)
             {
-                uint32_t min_roi = (uint32_t)atoi(cmd + 7);
-                uint32_t max_roi = (uint32_t)atoi(comma + 1);
-                if (max_roi > min_roi)
-                {
-                    SetRoi(min_roi, max_roi);
-                }
-                else
-                {
-                    ESP_LOGI(TAG, "Invalid ROI values");
-                    SendResponse("invalid");
-                }
+                SetPulseCount((uint16_t)parsed);
             }
             else
             {
-                ESP_LOGI(TAG, "Invalid ROI format");
+                ESP_LOGI(TAG, "Invalid count value");
                 SendResponse("invalid");
             }
         }
