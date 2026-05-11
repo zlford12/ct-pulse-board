@@ -25,6 +25,7 @@ const esp_timer_create_args_t scan_timer_args = {
 };
 esp_timer_handle_t pulse_timer;
 esp_timer_handle_t scan_timeout;
+static bool timeout_occurred = false;
 static uint8_t pulse_state = 0;
 static uint16_t pulse_count = 360;
 static uint16_t remaining_pulses = 0;
@@ -79,19 +80,22 @@ void RunScan()
     ESP_LOGI(TAG, "Running scan");
     SendResponse("scanning");
 
-    scan_task_hdl = xTaskGetCurrentTaskHandle();
-    xTaskNotifyStateClear(scan_task_hdl);
+    timeout_occurred = false;
     ESP_ERROR_CHECK(esp_timer_start_once(scan_timeout, SCAN_TIMEOUT));
-
     while (gpio_get_level(PULSE_START) == 0)
     {
         esp_rom_delay_us(1);
-        // check if the scan timeout has notified
+        if (timeout_occurred)
+        {
+            return;
+        }
     }
 
     ESP_LOGI(TAG, "Pulse Train Started");
-    remaining_pulses = pulse_count;
     esp_timer_stop(scan_timeout);
+    remaining_pulses = pulse_count;
+    scan_task_hdl = xTaskGetCurrentTaskHandle();
+    xTaskNotifyStateClear(scan_task_hdl);
     ESP_ERROR_CHECK(esp_timer_start_periodic(pulse_timer, 1000000 / (2 * pulse_freq)));
     xTaskNotifyWait(0, 0, NULL, portMAX_DELAY);
 }
@@ -123,7 +127,7 @@ static void PulseTimer(void *arg)
 
 static void ScanTimeout(void *arg)
 {
-    xTaskNotify(scan_task_hdl, 0, eNoAction);
+    timeout_occurred = true;
     ESP_LOGI(TAG, "Scan timed out");
     SendResponse("timeout");
 }
